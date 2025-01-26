@@ -21,7 +21,7 @@ This repository contains a Jewellery product reviews dataset with associated ana
   - Ratings: Integer ratings
   - Targets: Summary text
 
-### QueryText.csv.xlsx
+### QueryText.csv
 - Query-related text data
 - Complements query relevance scores
 
