@@ -23,13 +23,37 @@ Each task was designed to:
 - 100 documents total (95 student answers + 5 Wikipedia source articles)
 - 5 Computer Science topics with short answer questions
 - 4 categories of answers:
-  - Near copy (direct copying)
-  - Light revision (minor paraphrasing)
-  - Heavy revision (significant rewriting)
-  - Non-plagiarised (independent answers)
+  - Near copy (direct copying) [labelled as cut]
+  - Light revision (minor paraphrasing) [labelled as light]
+  - Heavy revision (significant rewriting) [labelled as heavy]
+  - Non-plagiarised (independent answers) [labelled as non]
 - Average text length: 208 words
 - Created by 19 participants (62% native English speakers)
 
+## Answer Categories
+
+### Near Copy
+- Answer provided by directly copying from Wikipedia article
+- Students selected relevant text within 200-300 word limit
+- No modifications to source text required
+
+### Light Revision
+- Based on Wikipedia text with minor modifications allowed 
+- Could substitute words/phrases with synonyms
+- Basic grammatical changes and paraphrasing permitted
+- Required to maintain original information order
+
+### Heavy Revision
+- Based on Wikipedia but significantly rewritten
+- Freedom to split or combine sentences
+- No restrictions on restructuring while keeping meaning
+- Could modify text organization extensively
+
+### Non-Plagiarism  
+- Used provided learning materials (lecture notes/textbooks)
+- Written based on understanding, not copying
+- Could reference any materials except Wikipedia
+- Demonstrated acquired knowledge rather than text reuse
 ## Data Format
 
 Each answer is labeled with:
