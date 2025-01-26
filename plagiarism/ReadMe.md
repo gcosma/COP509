@@ -1,5 +1,3 @@
-#Plagiarism Detection
-
 # Short Answer Plagiarism Detection Dataset
 
 This repository contains a corpus of short answer texts designed for evaluating plagiarism detection systems, originally created by Clough & Stevenson (2011).
@@ -7,17 +5,16 @@ This repository contains a corpus of short answer texts designed for evaluating 
 ## Dataset Overview
 
 ### Learning Tasks
-
-- a. What is inheritance in object oriented programming?
-- b. Explain the PageRank algorithm that is used by the Google search engine.
-- c. Explain the Vector Space Model that is used for Information Retrieval.
-- d. Explain Bayes Theorem from probability theory.
-- e. What is dynamic programming?
+A. What is inheritance in object oriented programming?
+B. Explain the PageRank algorithm that is used by the Google search engine.
+C. Explain the Vector Space Model that is used for Information Retrieval.
+D. Explain Bayes Theorem from probability theory.
+E. What is dynamic programming?
 
 Each task was designed to:
 - Represent different areas of Computer Science
 - Be answerable in 200-300 words
-- Not require specialised knowledge
+- Not require specialized knowledge
 - Have relevant Wikipedia articles as source material
 
 ## Dataset Overview
@@ -32,14 +29,23 @@ Each task was designed to:
 - Average text length: 208 words
 - Created by 19 participants (62% native English speakers)
 
+## Data Format
+
+Each answer is labeled with:
+- Task ID (A-E)
+- Plagiarism category 
+- Native/non-native speaker status
+- Level of task difficulty (1-5)
+- Student's knowledge level (1-5)
+
 ## File Structure
 
 ```
-File Structure
 data/
 ├── wikipedia/     # Original Wikipedia source articles
 ├── answers/       # Student answers organized by task
 └── metadata.csv   # Answer metadata and labels
+```
 
 ## Dataset Statistics
 
@@ -57,7 +63,7 @@ data/
 The dataset can be used to:
 - Train/evaluate plagiarism detection models
 - Study paraphrasing patterns
-- Analyse differences between native/non-native writers
+- Analyze differences between native/non-native writers
 - Research text similarity measures
 
 ## Citation
