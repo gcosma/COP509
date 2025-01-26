@@ -34,10 +34,11 @@ Each task was designed to:
 ## File Structure
 
 ```
+File Structure
 data/
-├── Student answers organized by task
+├── wikipedia/     # Original Wikipedia source articles
+├── answers/       # Student answers organized by task
 └── metadata.csv   # Answer metadata and labels
-```
 
 ## Dataset Statistics
 
