@@ -6,7 +6,7 @@ This repository contains a Jewellery product reviews dataset with associated ana
 ## Dataset Structure
 
 ### JewelleryReviewsLSA.csv
-- 200 jewelleryry product reviews
+- 200 jewellery product reviews
 - Columns:
   - ID: Unique identifier
   - Reviews: Review text
