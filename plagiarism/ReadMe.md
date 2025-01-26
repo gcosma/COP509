@@ -4,6 +4,17 @@ This repository contains a corpus of short answer texts designed for evaluating 
 
 ## Dataset Overview
 
+This dataset was created to support the evaluation of plagiarism detection systems for short answer texts. While various automated approaches exist for detecting plagiarism, direct comparison between systems has been challenging due to the lack of standardized evaluation resources that contain realistic examples of academic plagiarism.
+
+The corpus includes 100 documents comprising student answers to Computer Science questions, with varying levels of text reuse from Wikipedia sources. What makes this dataset unique is that it contains manually-crafted examples of plagiarism, simulating realistic student behaviors rather than using automated text manipulation. The answers were produced by 19 university students who were instructed to rewrite source texts using different approaches - from direct copying to complete rewriting.
+
+Key features that make this dataset valuable:
+- Contains authentic examples of how students actually modify text when plagiarizing
+- Includes both native and non-native English speakers
+- Provides detailed categorization of plagiarism types
+- Includes metadata about difficulty and student knowledge levels
+- Suitable for developing and evaluating plagiarism detection systems
+
 ### Learning Tasks
 
 1. What is inheritance in object oriented programming?
