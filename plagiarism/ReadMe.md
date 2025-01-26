@@ -5,11 +5,12 @@ This repository contains a corpus of short answer texts designed for evaluating 
 ## Dataset Overview
 
 ### Learning Tasks
-A. What is inheritance in object oriented programming?
-B. Explain the PageRank algorithm that is used by the Google search engine.
-C. Explain the Vector Space Model that is used for Information Retrieval.
-D. Explain Bayes Theorem from probability theory.
-E. What is dynamic programming?
+
+1. What is inheritance in object oriented programming?
+2. Explain the PageRank algorithm that is used by the Google search engine.
+3. Explain the Vector Space Model that is used for Information Retrieval.
+4. Explain Bayes Theorem from probability theory.
+5. What is dynamic programming?
 
 Each task was designed to:
 - Represent different areas of Computer Science
