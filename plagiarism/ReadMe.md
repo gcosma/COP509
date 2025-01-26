@@ -22,7 +22,7 @@ Each task was designed to:
 
 - 100 documents total (95 student answers + 5 Wikipedia source articles)
 - 5 Computer Science topics with short answer questions
-- 4 categories of answers:
+- 4 categories of answers (see below for more details):
   - Near copy (direct copying) [labelled as cut]
   - Light revision (minor paraphrasing) [labelled as light]
   - Heavy revision (significant rewriting) [labelled as heavy]
@@ -32,24 +32,24 @@ Each task was designed to:
 
 ## Answer Categories
 
-### Near Copy
+### Near Copy (Cut)
 - Answer provided by directly copying from Wikipedia article
 - Students selected relevant text within 200-300 word limit
 - No modifications to source text required
 
-### Light Revision
+### Light Revision (light)
 - Based on Wikipedia text with minor modifications allowed 
 - Could substitute words/phrases with synonyms
 - Basic grammatical changes and paraphrasing permitted
 - Required to maintain original information order
 
-### Heavy Revision
+### Heavy Revision (heavy)
 - Based on Wikipedia but significantly rewritten
 - Freedom to split or combine sentences
 - No restrictions on restructuring while keeping meaning
 - Could modify text organization extensively
 
-### Non-Plagiarism  
+### Non-Plagiarism (non)
 - Used provided learning materials (lecture notes/textbooks)
 - Written based on understanding, not copying
 - Could reference any materials except Wikipedia
