@@ -1,6 +1,6 @@
 # Short Answer Plagiarism Detection Dataset
 
-This repository contains a corpus of short answer texts designed for evaluating plagiarism detection systems, originally created by Clough & Stevenson (2011).
+This repository contains a corpus of short answer texts designed for evaluating plagiarism detection systems, originally created by Clough & Stevenson (2011). Please read this paper carefully https://link.springer.com/article/10.1007/s10579-009-9112-1 
 
 ## Dataset Overview
 
