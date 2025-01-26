@@ -1,7 +1,7 @@
-# COP509 - Jewelry Reviews Analysis
+# COP509 -  Jewellery Reviews Analysis
 
 ## Overview
-This repository contains a jewelry product reviews dataset with associated analytical components for natural language processing tasks.
+This repository contains a Jewellery product reviews dataset with associated analytical components for natural language processing tasks.
 
 ## Dataset Structure
 
@@ -12,7 +12,7 @@ This repository contains a jewelry product reviews dataset with associated analy
   - Reviews: Review text
   - Ratings: Numerical rating
 
-### JewelleryReviewsQueryRelevantID.csv
+### vReviewsQueryRelevantID.csv
 - Query1-8: Integer scores representing file IDs relevant to each query
 
 ### JewelleryReviewsSummarisationTargets.csv
