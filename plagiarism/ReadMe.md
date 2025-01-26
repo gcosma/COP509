@@ -15,7 +15,7 @@ This repository contains a corpus of short answer texts designed for evaluating 
 Each task was designed to:
 - Represent different areas of Computer Science
 - Be answerable in 200-300 words
-- Not require specialized knowledge
+- Not require specialised knowledge
 - Have relevant Wikipedia articles as source material
 
 ## Dataset Overview
@@ -26,7 +26,7 @@ Each task was designed to:
   - Near copy (direct copying)
   - Light revision (minor paraphrasing)
   - Heavy revision (significant rewriting)
-  - Non-plagiarized (independent answers)
+  - Non-plagiarised (independent answers)
 - Average text length: 208 words
 - Created by 19 participants (62% native English speakers)
 
@@ -57,14 +57,14 @@ data/
   - Near copy: 19 files
   - Light revision: 19 files  
   - Heavy revision: 19 files
-  - Non-plagiarized: 38 files
+  - Non-plagiarised: 38 files
 
 ## Usage Examples
 
 The dataset can be used to:
 - Train/evaluate plagiarism detection models
 - Study paraphrasing patterns
-- Analyze differences between native/non-native writers
+- Analyse differences between native/non-native writers
 - Research text similarity measures
 
 ## Citation
