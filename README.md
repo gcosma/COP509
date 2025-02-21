@@ -1,5 +1,8 @@
 **Introduction to COP509: Natural Language Processing**
+
 ![image](https://github.com/user-attachments/assets/0c4acdc2-7fae-40bc-8410-32af7feb4fd5)
+
+
 
 **Module Overview**
 You will learn how to process text data for information retrieval, classification and summarisation.
