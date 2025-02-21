@@ -1,4 +1,5 @@
 **Introduction to COP509: Natural Language Processing**
+![image](https://github.com/user-attachments/assets/0c4acdc2-7fae-40bc-8410-32af7feb4fd5)
 
 **Module Overview**
 You will learn how to process text data for information retrieval, classification and summarisation.
@@ -37,7 +38,6 @@ Tuesday||
 ## How to setup your Google drive for Colab tutorials and labs
 
 Refer to this page on how to get started with Colab and how **to setup your Drive for the tutorials** [Here is the link](https://colab.research.google.com/drive/1cZm_47Q1P9mzH65dlo01tUNi-ktCaxNh?usp=sharing)
-![image](https://github.com/user-attachments/assets/0c4acdc2-7fae-40bc-8410-32af7feb4fd5)
 
 **Resources for learning Colab**
 
