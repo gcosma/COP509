@@ -303,6 +303,8 @@ Apply Topic Modelling to the lab datasets.
 
 [**Tutorial 9 ** on BertTopic Modelling: BERTtopic tutorial](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial9BERTopic.ipynb)
 
+
+
 # Week 2, Day 1 Monday: Evaluation Measures
 
 ---
