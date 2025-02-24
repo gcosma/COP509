@@ -68,23 +68,6 @@ Relevant read: [Introduction to Neural Information Retrieval](https://www.micros
 
 [Slides: Back-to-basics: Boolean Retrieval](https://docs.google.com/presentation/d/1IRFW6xu2TNQIn9FC3ofA06OVxIpnpOOV/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)  
 
-**Activity 1:** Use ChatGPT. https://openai.com/blog/chatgpt/
-
-GPT stands for Generative Pre-trained Transformer https://www.techtarget.com/searchenterpriseai/definition/GPT-3
-
-Scenario: I want to develop an algorithm that clusters sentences, but don't have a dataset. I want to evaluate three different clustering algorithms but don't know which ones to choose? I also don't know how to evaluate the algorithms.
-
-Can you use chatGPT to get an answer?
-
-Put your findings in the shared docunent here: https://docs.google.com/document/d/1D8bA57ss0fAHzn1xv6BrM3VQaUpNqyBsmHm50NuFro8/edit?usp=sharing
-
-
-**Activity 2**
-Let’s look at: https://huggingface.co/models
-What is HuggingFace?
-Explore the NLP models?
-What can NLP be useful for? What do these models do?
-
 **PPT Slides [on-demand]:**
 
 [Slides: Intersecting Posting Lists](https://docs.google.com/presentation/d/1hbbBHrPfeyQZ5pPqRV88EMRV_I1VtiWA/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
