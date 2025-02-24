@@ -301,11 +301,7 @@ Part 3: Contemporary Retrieval Architectures: Neural re-rankers such as BERT, EP
 #Topic Modelling
 Apply Topic Modelling to the lab datasets.
 
-[**LAB SOLUTION:** Topic Modelling on the Art Reviews Dataset and more!](https://github.com/gcosma/COP509/blob/main/LabSolutions/Lab_Exercise_(No_7).ipynb)
-
 [**Tutorial 9 ** on BertTopic Modelling: BERTtopic tutorial](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial9BERTopic.ipynb)
-
-
 
 # Week 2, Day 1 Monday: Evaluation Measures
 
@@ -371,7 +367,7 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 9:00-9:45 - [NLP with BERT] (https://docs.google.com/presentation/d/1XRQe7xXQ8A8nn8GTuWaHkDhx-VIHvq9Q/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
 
-** Research talks **
+** Past Research talks **
 
 [Petro's talk & workshop] 10:00-11::00 - Machine Unlearning
 
@@ -488,9 +484,6 @@ Workshop 2 activity:
 
 # Week 2, Day 4 Friday: Coursework and Additional Information
 ---
-Coursework PDF
-
-Coursework HINTS
 
 Video recording: [Lab:Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?app=desktop&v=kCc8FmEb1nY])
 
