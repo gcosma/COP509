@@ -381,7 +381,7 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 
 **Tutorial 6**
 14:00-15:00
-Colab: [A Visual Notebook to Using BERT for the First Time](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial9BERTopic.ipynb)
+Colab: [A Visual Notebook to Using BERT for the First Time](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb)
 
 **Lab Exercise (No. 5)**
 
