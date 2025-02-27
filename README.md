@@ -465,8 +465,9 @@ Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
   2. [DeepSeek Worshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
 
-# Week 2, Day 4 Friday: Coursework and Additional Information
+# Week 2, Day 4 Friday: Guest speaker, Coursework and Additional Information
 ---
+10:00-11:00 Guest speaker from SVGC
 
 Video recording: [Lab:Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?app=desktop&v=kCc8FmEb1nY])
 
