@@ -352,14 +352,6 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 9:00-9:45 - [NLP with BERT] (https://docs.google.com/presentation/d/1XRQe7xXQ8A8nn8GTuWaHkDhx-VIHvq9Q/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
 
-** Past Research talks **
-
-[Petro's talk & workshop] 10:00-11::00 - Machine Unlearning
-
-[Mikel's talk]11:00-12:00  - Vision-Language Transformers and Hashing for Image-Text Retrieval
-
-[Petro's talk] 13:00-14:00 Training Your Own Large Language Model and Sharing It on HuggingFace Hub
-
 **Tutorial 6**
 14:00-15:00
 Colab: [A Visual Notebook to Using BERT for the First Time](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb)
@@ -449,8 +441,14 @@ Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 
 
 
-# Week 2, Day 3 Thursday: Deduplication Workshop
+# Week 2, Day 3 Thursday: Research Talks and Deduplication Workshop
 ---
+** Research talks **
+
+[Mikel's talk] 11:00-12:00  - Vision-Language Transformers and Hashing for Image-Text Retrieval
+
+[Petro's talk] 12:00-13:00 Training Your Own Large Language Model and Sharing It on HuggingFace Hub
+
 *Please attend as we will be working in groups
 
 Read paper Deduplicating Training Data Makes Language Models Better https://arxiv.org/abs/2107.06499
