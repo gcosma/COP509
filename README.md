@@ -259,17 +259,17 @@ Colab page: [Latent Semantic Analysis](https://github.com/gcosma/COP509/blob/mai
 
 **Lab Exercise (No. 4a)**
 
-1. Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) and repeat the Lab sheet to apply LSA.
+1. Your task is to read and understand the LSA lab exercise code. Apply and tune the LSA solution further. Apply more cleaning, try out different weightning schemes and tune using different SVD dimensions. 
 
-2. Write code to retrieve the top 10 results for the 2 given queries.
+Run this Coladb code: [LSA lab](https://github.com/gcosma/COP509/blob/main/LabSolutions/Lab_Exercise_(No_4a).ipynb) 
+
+2. Write code to retrieve the top 20 results for the 2 given queries.
 ['I really enjoy these scissors!',
 'I hate the pen!']
-
 
 **Instructions for the Lab Exercise**
 
 Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
-
 
 **Additional Resource**
 
