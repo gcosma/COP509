@@ -236,7 +236,7 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 **Lecture Material**
 
-**PPT Slides [on demand]**
+**PPT Slides**
 
 [LSA Part 1 - Latent Semantic Indexing](https://docs.google.com/presentation/d/19jPwerqd7G3Jw7oTmviPeU7QtjQ3SMZj/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
