@@ -12,10 +12,10 @@ You will learn how to process text data for information retrieval, classificatio
 | Day 2     | Bag of Words|  
 | Day 3   | NLP with Deep Learning and Word Embeddings|   
 | Day 4     | LSI for Information Retrieval|
-| Day 1     | Evaluation Measures|
-| Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT|   
-| Day 3   | Deduplication workshop    
-| Day 4    |DeepSeek workshop, Coursework Q&A|   
+| Day 1     | Evaluation Measures. Coursework released and explained.|
+| Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT. Deduplication methods.|   
+| Day 3   | Petros and Mike's presentations. Deduplication workshop   
+| Day 4    |Company presentations. DeepSeek workshop, Coursework Q&A|   
 
 **Sessions**
 
