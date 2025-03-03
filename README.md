@@ -14,7 +14,7 @@ You will learn how to process text data for information retrieval, classificatio
 | Day 4     | LSI for Information Retrieval|
 | Day 1     | Evaluation Measures. Coursework released and explained.|
 | Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT. Deduplication methods.|   
-| Day 3   | Petros and Mike's presentations. Deduplication workshop   
+| Day 3   | Petros and Mikel's presentations. Deduplication workshop   
 | Day 4    |Company presentations. DeepSeek workshop, Coursework Q&A|   
 
 **Sessions**
