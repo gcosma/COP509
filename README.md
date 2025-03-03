@@ -13,8 +13,8 @@ You will learn how to process text data for information retrieval, classificatio
 | Day 3   | NLP with Deep Learning and Word Embeddings|   
 | Day 4     | LSI for Information Retrieval|
 | Day 1     | Evaluation Measures. Coursework released and explained.|
-| Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT. Deduplication methods.|   
-| Day 3   | Petros and Mikel's presentations. Deduplication workshop   
+| Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT. |   
+| Day 3   | Petros and Mikel's presentations. Deduplication and Deduplication workshop|
 | Day 4    |Company presentations. DeepSeek workshop, Coursework Q&A|   
 
 **Sessions**
@@ -346,32 +346,23 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 **PPT Slides**
 
 **Lecture Material/Tutorial on Sentiment Analysis with BERT**
-
-[All of Wednesday's talks and sessions can be found here](https://drive.google.com/drive/folders/19Jisk9Ld27tXz87Al4gsNticY7BNLqDC?usp=drive_link)
-
 9:00-9:45 - [NLP with BERT] (https://docs.google.com/presentation/d/1XRQe7xXQ8A8nn8GTuWaHkDhx-VIHvq9Q/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
 
 **Tutorial 6**
 14:00-15:00
 Colab: [A Visual Notebook to Using BERT for the First Time](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb)
 
 **Lab Exercise (No. 5)**
-
 Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) and repeat the Tutorial.
 
 **Instructions for Lab Exercise**
-
 Use the top **500** data of *'ArtsReviews_5000_train.txt'* and *'ArtsRatings_5000_train.txt'* for tarining;
-
 Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000_test.txt'* for testing.
-
 [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
 
 
 # Week 2, Day 2 Tuesday: Text Summarisation
 ---
-
 
 **Lecture Material**
 
