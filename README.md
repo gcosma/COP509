@@ -370,26 +370,10 @@ Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000
 
 [Automatic Text Summarisation](https://docs.google.com/presentation/d/1axQCNOf_zxIDN5_qxYJGmvwnyteBnzmv/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
-[Computer Science CV guidance](https://www.beamjobs.com/resumes/computer-science-resume-examples)
-
-How To Write Exactly This CV?
-If you like []my particular CV template I wrote it in Latex, and you can find this template here. It is a variation from this template from Overleaf [CV template](https://www.overleaf.com/latex/templates/entry-level-resume-template-latex/jsmpwkcwyntg). Some of their [videos] (https://www.youtube.com/watch?v=n8NgELVMRS0)
-
-[Leetcode -- interview question prep - coding](https://leetcode.com/)
-
-[ICO toolkit](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/ai-and-data-protection-risk-toolkit/)
-
-**Lecture Activity**
-
-- Try out some summarisation methods from Huggingface https://huggingface.co/models?pipeline_tag=summarization&sort=downloads. Can you tell which are abstractive and which are extractive?
-
-- Have a look at this model? https://huggingface.co/philschmid/flan-t5-base-samsum what metrics have they used to evaluate performance? how are these different to other metrics you have come across for NLP and classification tasks?
 
 **Reading**
 
 [A gentle introduction to Text summarisation](https://machinelearningmastery.com/gentle-introduction-text-summarization/)
-
-[SummerTime Library for Text Summarisation and Evaluation GitHub] (https://github.com/Yale-LILY/SummerTime) [ONLY FOR LEARNING - The code no longer works]
 
 **Tutorials 7 and 8**
 
@@ -402,7 +386,6 @@ Colab: [Hugging Face Summarisation Tutorial](https://colab.research.google.com/d
 Your task is to apply text summarisation and evaluation to the ArtReviews dataset using the turorial example. You will only need to summarise using the different models and evaluate and compare the results. Briefly outline in bullets the main findings.  
 
 **Instructions and Tips for Lab Exercise**
-
 1. Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 2. Creating CustomDataset is not mandatory, and directly using the reviews of *'Reduced_ArtsReviews_5000.txt'* is also acceptable.
 3. The ground truth for evaluation is given as follows:
@@ -422,16 +405,14 @@ targets = ['the product is overpriced'
            'Unfortunately the extra broad nib was cracked and leaked all over.']
 
 **Lab Exercise (No. 7)**
-
 Your task is to apply text summarisation to the ArtReviews dataset using abstarctice and extractive summarisaiton models by following the above tutorials.
 
 **Instructions for Lab Exercise**
-
 Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
 
-
-
+**Other**
+[SummerTime Library for Text Summarisation and Evaluation GitHub] (https://github.com/Yale-LILY/SummerTime) [ONLY FOR LEARNING - The code no longer works]
 # Week 2, Day 3 Thursday: Research Talks and Deduplication Workshop
 ---
 ** Research talks **
@@ -522,10 +503,13 @@ Lab Exercise (No. 6)
 Lab Exercise (No. 7)
 
 
+**Other**
+[Computer Science CV guidance](https://www.beamjobs.com/resumes/computer-science-resume-examples)
 
+How To Write Exactly This CV?
+If you like []my particular CV template I wrote it in Latex, and you can find this template here. It is a variation from this template from Overleaf [CV template](https://www.overleaf.com/latex/templates/entry-level-resume-template-latex/jsmpwkcwyntg). Some of their [videos] (https://www.youtube.com/watch?v=n8NgELVMRS0)
 
+[Leetcode -- interview question prep - coding](https://leetcode.com/)
 
-    
-    To see all available configurables, use `--help-all`.
-    
+[ICO toolkit](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/ai-and-data-protection-risk-toolkit/)
 
