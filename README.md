@@ -28,11 +28,11 @@ You will learn how to process text data for information retrieval, classificatio
 
 | Week 1 and 2   |Lecture|Lab           |
 | :---------     | :---------   | :------------------ |
-|Monday| 	9:00-11:00 	|11:00-12:00, 13:00-15:00  |
-Tuesday|9:00-11:00 |11:00-12:00, 13:00-15:00 |
+|Monday| 	9:00-12:00 	|13:00-15:00  |
+Tuesday|9:00-12:00 |13:00-15:00 |
 |Wednesday| 	|
-|Thursday| 	9:00-11:00 |11:00-12:00, 13:00-15:00  |
-|Friday| 	9:00-11:00 |11:00-12:00, 13:00-15:00  |
+|Thursday| 	9:00-12:00 |13:00-15:00  |
+|Friday| 	9:00-12:00 |13:00-15:00  |
 |Total:| 	20 hours x 2 weeks = 40 hours |
 
 
