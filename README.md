@@ -390,7 +390,8 @@ Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 
 **Other**
 [SummerTime Library for Text Summarisation and Evaluation GitHub] (https://github.com/Yale-LILY/SummerTime) [ONLY FOR LEARNING - The code no longer works]
-# Week 2: Research Talks and Deduplication Workshop
+
+# Week 10: Research Talks and Deduplication Workshop
 ---
 ** Research talks **
 
@@ -406,7 +407,7 @@ Workshop activity:
 1. Read the [deduplication paper](https://arxiv.org/pdf/2107.06499)
 2. [Deduplication Workshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
 
-#Week 2: DeepSeek Workshop
+#Week 10: DeepSeek Workshop
 
 *Please attend as we will be working in groups
 
@@ -414,7 +415,7 @@ Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
   2. [DeepSeek Worshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
 
-# Week 2: Guest speaker, Coursework and Additional Information
+# Week 11: Guest speaker, Coursework and Additional Information
 ---
 10:00-11:00 Guest speaker from SVGC
 
