@@ -4,37 +4,18 @@
 
 
 **Module Overview**
-You will learn how to process text data for information retrieval, classification and summarisation.
+You will learn how to process text data for information retrieval, classification and summarisation. All sessions are on Mondays 10-12.
 
-| Day               | Topic          |
+| Week               | Topic          |
 | :---------                 | :------------------ |
-| Day 1     | Introduction to the module and NLP basics|   
-| Day 2     | Bag of Words|  
-| Day 3   | NLP with Deep Learning and Word Embeddings|   
-| Day 4     | LSI for Information Retrieval|
-| Day 1     | Evaluation Measures. Coursework released and explained.|
-| Day 2     | Sentiment Analysis with BERT, Text Summarisation with GPT. |   
-| Day 3   | Petros and Mikel's presentations. Deduplication and Deduplication workshop|
-| Day 4    |Company presentations. DeepSeek workshop, Coursework Q&A|   
-
-**Sessions**
-
-| Week 1 and 2    |Lecture (On Demand) |Type      |
-| :---------     | :---------   | :------------------ |
-|Monday |	16:00-17:00 |	On demand (means in your own time) |
-|Tuesday |	16:00-17:00 |	On demand (in your own time)  |
-|Total: 	2 x 2=4 hours||
-
-
-| Week 1 and 2   |Lecture|Lab           |
-| :---------     | :---------   | :------------------ |
-|Monday| 	9:00-12:00 	|13:00-15:00  |
-Tuesday|9:00-12:00 |13:00-15:00 |
-|Wednesday| 	|
-|Thursday| 	9:00-12:00 |13:00-15:00  |
-|Friday| 	9:00-12:00 |13:00-15:00  |
-|Total:| 	20 hours x 2 weeks = 40 hours |
-
+| Week 1     | Introduction to the module and NLP basics|   
+| Week 2     | Bag of Words|  
+| Week 3   | NLP with Deep Learning and Word Embeddings|   
+| Week 4     | LSI for Information Retrieval|
+| Week 5-6     | Evaluation Measures. Coursework released and explained.|
+| Week 7-8     | Sentiment Analysis with BERT, Text Summarisation with GPT. |   
+| Week 9   | Petros and Mikel's presentations. Deduplication and Deduplication workshop|
+| Week 10    |Company presentations. DeepSeek workshop, Coursework Q&A|   
 
 
 ## How to setup your Google drive for Colab tutorials and labs
@@ -55,7 +36,7 @@ Colab page: [Introduction to Colab for machine learning](https://colab.research.
 
 Relevant read: [Introduction to Neural Information Retrieval](https://www.microsoft.com/en-us/research/publication/introduction-neural-information-retrieval/)
 
-# Week 1, Day 1 Monday: Introduction to module and NLP Basics
+# Week 1: Introduction to module and NLP Basics
 ---
 
 **About the module**
@@ -102,7 +83,7 @@ Part 1: Classical IR: indexing, retrieval and evaluation
 
 [PyTerrier documentation](https://pyterrier.readthedocs.io/en/latest/).
 
-# Week 1, Day 2 Tuesday: Bag-Of-Words
+# Week 2: Bag-Of-Words
 ---
 
 **Lecture Material**
@@ -162,7 +143,7 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 Notes: Ratings start from **1** to **5**, but the result of ***to_categorical()*** starts from **0**. Therefore, every Rating label needs to be decreased with **1** if training and testing, and the result of prediction needs to be increased with **1**.
 
-# Week 1, Day 3 Thursday : NLP with Deep Learning and Word Embeddings
+# Week 3: NLP with Deep Learning and Word Embeddings
 ---
 
 **Lecture Material**
@@ -196,7 +177,7 @@ Part 2: Modern Retrieval Architectures: PyTerrier data model and operators, towa
 [Notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook2.ipynb)
 
 
-**Day 3 Lab Material**
+**Week 3 Lab Material**
 
 For the labs, you will focus on Text Classification with Deep Learning.
 
@@ -207,13 +188,13 @@ Colab page: [Word Embedding Representation](https://colab.research.google.com/dr
 Colab page: [Learned Embedding](https://colab.research.google.com/drive/1YBTq8whaCg4EGRZkRHlRDQt7b3nNDZSP?usp=sharing)
 
 
-**Day 3 Lab Tutorial (Tutorial 3)**
+**Week 3 Lab Tutorial (Tutorial 3)**
 
 Colab: [Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial3CNNforSentimentAnalysis.ipynb)
 
-**Day 3 Lab Exercise (No. 3)**
+**Week 3 Lab Exercise (No. 3)**
 
-Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) and repeat the Lab Tutorial (Day 4 lab tutorial). Briefly outline in bullets the main findings.
+Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) and repeat the Lab Tutorial (Week 4 lab tutorial). Briefly outline in bullets the main findings.
 
 - How to prepare movie review text data for classification with deep learning methods.
 - How to learn a word embedding as part of fitting a deep learning model.
@@ -231,7 +212,7 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 4. Do not forget to clean the reviews with **lowercase**, otherwise, you may get an error on using word2vector embeddings for classification.
 
-# Week 1, Day 4 Friday: LSI for Information Retrieval (non-machine learning)
+# Week 4: LSI for Information Retrieval (non-machine learning)
 ---
 
 **Lecture Material**
@@ -288,13 +269,9 @@ Apply Topic Modelling to the lab datasets.
 
 
 
-# Week 2, Day 1 Monday: Evaluation Measures
+# Week 5-6: Evaluation Measures
 
 ---
-
-
-
-
 
 **Lecture Material**
 
@@ -338,7 +315,7 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 [224,353,368,415,462,571,856,880,903,906,1377,1532,1784,1901,2061,2690,2719,3380,3925,4164,4279,4833,4852]]
 
 
-# Week 2, Day 2 Tuesday: Sentiment Analysis with BERT
+# Week 7-8: Sentiment Analysis with BERT
 ---
 
 **Lecture Material**
@@ -361,7 +338,7 @@ Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000
 [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
 
 
-# Week 2, Day 2 Tuesday: Text Summarisation
+# Week 9: Text Summarisation
 ---
 
 **Lecture Material**
@@ -413,7 +390,7 @@ Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 
 **Other**
 [SummerTime Library for Text Summarisation and Evaluation GitHub] (https://github.com/Yale-LILY/SummerTime) [ONLY FOR LEARNING - The code no longer works]
-# Week 2, Day 3 Thursday: Research Talks and Deduplication Workshop
+# Week 2: Research Talks and Deduplication Workshop
 ---
 ** Research talks **
 
@@ -429,7 +406,7 @@ Workshop activity:
 1. Read the [deduplication paper](https://arxiv.org/pdf/2107.06499)
 2. [Deduplication Workshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
 
-#Week 2, Day 4 Friday: DeepSeek Workshop
+#Week 2: DeepSeek Workshop
 
 *Please attend as we will be working in groups
 
@@ -437,7 +414,7 @@ Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
   2. [DeepSeek Worshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
 
-# Week 2, Day 4 Friday: Guest speaker, Coursework and Additional Information
+# Week 2: Guest speaker, Coursework and Additional Information
 ---
 10:00-11:00 Guest speaker from SVGC
 
