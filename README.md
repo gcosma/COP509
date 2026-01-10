@@ -45,9 +45,9 @@ Relevant read: [Introduction to Neural Information Retrieval](https://www.micros
 
 [Slides: Module Introduction](https://docs.google.com/presentation/d/11T7WKKYjZfMdAcg2ZGidZkc6jA4qBh9t/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
-[Slides: What is NLP?](https://docs.google.com/presentation/d/1T5_0aLALKSD4Fn-Cnl9yJuQFWcpvvvVX/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
+[Slides: What is NLP?](Link pending)
 
-[Slides: Back-to-basics: Boolean Retrieval](https://docs.google.com/presentation/d/1IRFW6xu2TNQIn9FC3ofA06OVxIpnpOOV/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)  
+[Slides: Back-to-basics: Boolean Retrieval](Link pending)  
 
 **PPT Slides [on-demand]:**
 
