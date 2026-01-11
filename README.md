@@ -102,7 +102,7 @@ Part 1: Classical IR: indexing, retrieval and evaluation
 
 Colab page: [Bag of Words](https://colab.research.google.com/drive/1XFRKBLCLSVuXmBeE3OGg4hzr7TxbmKvD?usp=sharing)
 
-**Recordings for the PPTs [on-demand]:**
+**Recordings for the PPTs (older versions):**
 
 [VSM Part 1: Ranked Retrieval](https://drive.google.com/file/d/1AqDT-X0JCRnmHD-u_mmwgFjnweLB2G0R/view?usp=sharing) (7 mins)
 
