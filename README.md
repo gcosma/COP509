@@ -69,20 +69,6 @@ Your task is to clean the Art Rating dataset that has been provided to you.Great
 
 Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
 
-
-**Additional Task - Optional**
-
-**Useful library:** [PyTerrier](https://github.com/terrier-org/ecir2021tutorial)
-
-PyTerrier makes it easy to perform IR experiments in Python, but using the mature Terrier platform for the expensive indexing and retrieval operations. The following tutorial introduces PyTerrier for indexing, information retrieval and evaluation. Evaluation measures are taught in Week 2 Monday.
-
-Part 1: Classical IR: indexing, retrieval and evaluation
-[Slides](https://github.com/terrier-org/ecir2021tutorial/blob/main/slides/part1.pdf)
-
-[Notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook1.ipynb) [Link to download notebooks](https://github.com/terrier-org/ecir2021tutorial/tree/main/notebooks)
-
-[PyTerrier documentation](https://pyterrier.readthedocs.io/en/latest/).
-
 # Week 2: Bag-Of-Words
 ---
 
