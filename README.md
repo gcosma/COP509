@@ -238,15 +238,6 @@ Run this Coladb code: [LSA lab](https://github.com/gcosma/COP509/blob/main/LabSo
 
 Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
 
-**Additional Resource**
-
-Part 3: Contemporary Retrieval Architectures: Neural re-rankers such as BERT, EPIC, ColBERT
-
-[Slides](https://github.com/terrier-org/ecir2021tutorial/blob/main/slides/part3.pdf)
-
-[OpenNIR and monoT5 Notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook3.1.ipynb)
-
-[ColBERT Re-Ranker Notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook3.2.ipynb)
 
 #Topic Modelling
 Apply Topic Modelling to the lab datasets.
