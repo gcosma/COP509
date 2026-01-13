@@ -33,7 +33,7 @@ Colab page: [Introduction to Colab for machine learning](https://colab.research.
 
 **About the module**
 
-**PPT Slides**
+**Slides**
 
 **Lab Tutorials (Tutorial 1)**
 
@@ -47,8 +47,6 @@ Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.g
 
 # Week 2: Bag-Of-Words
 ---
-
-**Lecture Material**
 
 **PPT Slides**
 
