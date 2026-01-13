@@ -154,16 +154,6 @@ Apply Topic Modelling to the lab datasets.
 
 **Lecture Material**
 
-**PPT slides [On Demand]**
-
-**Recordings for the PPTs [On Demand]**
-
-[Evaluation measures Part 1 - Ranked Evaluation](https://drive.google.com/file/d/1l4Ptz7X85ZQOIs3KDy5-CKvQw9j1_4-l/view?usp=sharing) (12 mins)
-
-[Evaluation measures Part 2 - Unranked Evaluation](https://drive.google.com/file/d/1SmjtEHBfq4w6rnlOhCrCrFxePMROIxY4/view?usp=sharing) (18 mins)
-
-[Evaluation measures Part 3 - Evaluation benchmarks](https://drive.google.com/file/d/1f29FNQX2s7lgCLwLkdZHKZi0m5vVtb8s/view?usp=sharing) (4 mins)
-
 **Lab Tutorial (Tutorial 5)**
 
 Colab: [Evaluation Measures](https://colab.research.google.com/drive/1XZc5cx3GKTUYJhLZjWgWyobkrGFd6nfA?usp=sharing)
