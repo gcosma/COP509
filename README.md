@@ -35,7 +35,6 @@ Colab page: [Introduction to Colab for machine learning](https://colab.research.
 
 **PPT Slides**
 
-
 **Lab Tutorials (Tutorial 1)**
 
 Colab page: [How to Clean Text for Machine Learning with Python](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial1NLPcleanText.ipynb)
@@ -52,31 +51,6 @@ Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.g
 **Lecture Material**
 
 **PPT Slides**
-
-[VSM Part 1: Ranked Retrieval](https://docs.google.com/presentation/d/1g2DweBphynTzsEd_L1jQjw7Xp2zYGsJA/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[VSM Part 2: Term Frequency](https://docs.google.com/presentation/d/1JplCLgZpODtTS2YPxf06Zwa-1bueLADv/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[VSM Part 3: TF-IDF](https://docs.google.com/presentation/d/1KFmzzTFVth4BhLbUdrARewCrFE7Fjskw/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[VSM Part 4a: The Vector Space Model](https://docs.google.com/presentation/d/17o3WcVQTKxomlrThr7MQlNWWdkVetE3D/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[BagOfWords Practical Lecture (See Part I)](https://docs.google.com/presentation/d/1kHgctXhFQF5EPrniAjzrHrJaOJ55IIvE/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-Colab page: [Bag of Words](https://colab.research.google.com/drive/1XFRKBLCLSVuXmBeE3OGg4hzr7TxbmKvD?usp=sharing)
-
-**Recordings for the PPTs (older versions):**
-
-[VSM Part 1: Ranked Retrieval](https://drive.google.com/file/d/1AqDT-X0JCRnmHD-u_mmwgFjnweLB2G0R/view?usp=sharing) (7 mins)
-
-[VSM Part 2: Term Frequency](https://drive.google.com/file/d/1EF6zCoSwZ_oLd_aYPpvwqnHhgjd2HyMe/view?usp=sharing) (10 mins)
-
-[VSM Part 3: TF-IDF](https://drive.google.com/file/d/1jQS6YWYHa5YJzZ6S20pN7i3vpwj3i1e1/view?usp=sharing) (15 mins)
-
-[VSM Part 4a: The Vector Space Model and Computing Vector Similarity for Unormalised Vectors](https://drive.google.com/file/d/1vjpmTFlW4mRG3T-ChoV_VHD5JC8GDOEC/view?usp=sharing) (21 mins)
-
-[VSM Part 4b: Computing Vector Similarity for Normalised Vectors](https://drive.google.com/file/d/1bpbf1MXHIr3BFpYdwC2x2ewudUxu8NTl/view?usp=sharing) (8 mins)
-
 
 **Lab Tutorial (Tutorial 2)**
 
@@ -113,47 +87,21 @@ Notes: Ratings start from **1** to **5**, but the result of ***to_categorical()*
 
 **PPT Slides**
 
-[Similarity and Distance](https://docs.google.com/presentation/d/1IupWoCYACLs_mEgZBkmULnqss73RzkeT/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[Document Similarity](https://docs.google.com/presentation/d/1DJX92LMk6okLVqklqhn1luP8hY_diihS/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-Word embeddings lecture I (from yesterday)
-
-[Word Embeddings Practical Lecture (See Part II)](https://docs.google.com/presentation/d/1kHgctXhFQF5EPrniAjzrHrJaOJ55IIvE/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-**Recordings for the PPTs [on-demand]**
-
-[Similarity and Distance](https://drive.google.com/file/d/1fziGTulP0btHoBHJYd6VbGLNj1QGowTD/view?usp=sharing)
-
-[Document Similarity](https://drive.google.com/file/d/1YHDTUTRHaxOMGfaWGUGMJSLVZxjzmvwz/view?usp=sharing)
 
 **Reading**
 
 [A Tale of Two Encodings: Comparing Bag-of-Words and Word2vec for VQA](https://www.cs.princeton.edu/courses/archive/spring18/cos598B/public/projects/System/COS598B_spr2018_TwoEncodings.pdf)
 
-**Additional Resource**
 
-Part 2: Modern Retrieval Architectures: PyTerrier data model and operators, towards re-rankers and learning-to-rank
-
-[Slides](https://github.com/terrier-org/ecir2021tutorial/blob/main/slides/part2.pdf)
-
-[Notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook2.ipynb)
-
-
-**Week 3 Lab Material**
+**Week 3 Tutorials**
 
 For the labs, you will focus on Text Classification with Deep Learning.
 
-Reading: [Best Practices for Text Classification with Deep Learning](https://machinelearningmastery.com/best-practices-document-classification-deep-learning/)
+1. Colab page: [Word Embedding Representation](https://colab.research.google.com/drive/1ylqlTKgTX_AVUgkrPYvuTJmP8V33gKse?usp=sharing)
 
-Colab page: [Word Embedding Representation](https://colab.research.google.com/drive/1ylqlTKgTX_AVUgkrPYvuTJmP8V33gKse?usp=sharing)
+2. Colab page: [Learned Embedding](https://colab.research.google.com/drive/1YBTq8whaCg4EGRZkRHlRDQt7b3nNDZSP?usp=sharing)
 
-Colab page: [Learned Embedding](https://colab.research.google.com/drive/1YBTq8whaCg4EGRZkRHlRDQt7b3nNDZSP?usp=sharing)
-
-
-**Week 3 Lab Tutorial (Tutorial 3)**
-
-Colab: [Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial3CNNforSentimentAnalysis.ipynb)
+3. Colab: [Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial3CNNforSentimentAnalysis.ipynb)
 
 **Week 3 Lab Exercise (No. 3)**
 
@@ -180,26 +128,6 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 **Lecture Material**
 
-**PPT Slides**
-
-[LSA Part 1 - Latent Semantic Indexing](https://docs.google.com/presentation/d/19jPwerqd7G3Jw7oTmviPeU7QtjQ3SMZj/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[LSA Part 2 - Dimensionality Reduction](https://docs.google.com/presentation/d/1cDWDU3spgyCNHjSir9I9ZpSrz8vacZlu/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[LSA Part 3 - LSI for information retrieval](https://docs.google.com/presentation/d/1ODMFK089oOWt4_6hibVyhkxdJ_wbcfdd/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-**Recordings for the PPTs [on-demand]**
-
-[LSA Part 1 recording - Latent Semantic Indexing](https://drive.google.com/file/d/14h0p0YgSlbqhZYY5NAuSIEUQKEcneSEw/view?usp=sharing) (9 mins)
-
-[LSA Part 2 recording - Dimensionality Reduction](https://drive.google.com/file/d/1TA6HaPXCoWzNvqbgXyQoGhOAjrJJnSNq/view?usp=sharing) (9 mins)
-
-[LSA Part 3 recording - LSI for information retrieval](https://drive.google.com/file/d/16q6W3t5EZoeOtftgE9Dk9ELSsMwxVw3Q/view?usp=sharing) (10 mins)
-
-**Lab Tutorials (Tutorial 4)**
-
-Colab page: [Latent Semantic Analysis](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial4LSA.ipynb)
-
 
 **Lab Exercise (No. 4a)**
 
@@ -215,7 +143,6 @@ Run this Coladb code: [LSA lab](https://github.com/gcosma/COP509/blob/main/LabSo
 
 Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
 
-
 #Topic Modelling
 Apply Topic Modelling to the lab datasets.
 
@@ -230,10 +157,6 @@ Apply Topic Modelling to the lab datasets.
 **Lecture Material**
 
 **PPT slides [On Demand]**
-
-[Evaluation Measures](https://docs.google.com/presentation/d/1OSDB4NtSuOnlOiU5_Hej17DfAhqyFEBc/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[Excel spreadsheet for demonstration only](https://docs.google.com/spreadsheets/d/1D7vl-GxQ6xsdvKqFtCsdDNIK80RgUy57/edit?usp=drive_link&ouid=110090632559945494350&rtpof=true&sd=true) -might need downloading cause charts are not showing properly via google
 
 **Recordings for the PPTs [On Demand]**
 
@@ -299,13 +222,6 @@ Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000
 
 **PPT Slides**
 
-[Automatic Text Summarisation](https://docs.google.com/presentation/d/1axQCNOf_zxIDN5_qxYJGmvwnyteBnzmv/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-
-**Reading**
-
-[A gentle introduction to Text summarisation](https://machinelearningmastery.com/gentle-introduction-text-summarization/)
-
 **Tutorials 7 and 8**
 
 [A notebook provided by me] (https://drive.google.com/file/d/1JdYX3reNpYl9NWwZUAVkTd81zzQEViwi/view?usp=drive_link)
@@ -349,12 +265,6 @@ Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 ---
 ** Research talks **
 
-[Mikel's talk] 11:00-12:00  - Vision-Language Transformers and Hashing for Image-Text Retrieval
-
-[Petro's talk] 12:00-13:00 Training Your Own Large Language Model and Sharing It on HuggingFace Hub
-
-*Please attend as we will be working in groups
-
 Read paper Deduplicating Training Data Makes Language Models Better https://arxiv.org/abs/2107.06499
 
 Workshop activity:
@@ -368,36 +278,6 @@ Workshop activity:
 Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
   2. [DeepSeek Worshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
-
-# Week 11: Guest speaker, Coursework and Additional Information
----
-10:00-11:00 Guest speaker from SVGC
-
-Video recording: [Lab:Let's build GPT: from scratch, in code, spelled out.](https://www.youtube.com/watch?app=desktop&v=kCc8FmEb1nY])
-
-Activity:
-- Pretrain the transformer on the reviews dataset, then initialize with that model and finetune it on tiny shakespeare with a smaller number of steps and lower learning rate. Can you obtain a lower validation loss by the use of pretraining?
-
-**Additional Reading**
-
-Reading: [Neural Information Retrieval](https://www.microsoft.com/en-us/research/uploads/prod/2017/06/fntir2018-neuralir-mitra.pdf)
-
-**Additional Libraries**
-
-1. The official repository of "IR From Bag-of-words to BERT and Beyond through Practical Experiments", an ECIR 2021 full-day tutorial with PyTerrier and OpenNIR search toolkits. [PyTerrier tutorials in Google Colab](https://github.com/terrier-org/ecir2021tutorial)
-
-Part 4: Recent Advances beyond the classical inverted index: neural inverted index augmentation, nearest neighbor search, dense retrieval
-
-- [Slides](https://github.com/terrier-org/ecir2021tutorial/blob/main/slides/part4.pdf)
-
-- [doc2query and DeepCT notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook4.1.ipynb)
-
-- [ANCE notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook4.3.ipynb)
-
-- [ColBERT notebook Open In Colab](https://github.com/terrier-org/ecir2021tutorial/blob/main/notebooks/notebook4.3.ipynb)
-
-
-
 
 
 **COURSEWORK (will be released in week 2)**
