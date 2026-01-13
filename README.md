@@ -28,14 +28,6 @@ Youtube video: [Getting started with Google Colab](https://www.youtube.com/watch
 
 Colab page: [Introduction to Colab for machine learning](https://colab.research.google.com/drive/1pKqHYLsxV91MmGaNFgRPuZb7U34hllUO?usp=sharing)
 
-**Main Concepts**
-1. Cleaning Text Data
-2. Bag-of-Words Model
-3. Word Embeddings Representation and Learning
-4. Semantic Analysis, Information Retrieval and Text Summarisation
-
-Relevant read: [Introduction to Neural Information Retrieval](https://www.microsoft.com/en-us/research/publication/introduction-neural-information-retrieval/)
-
 # Week 1: Introduction to module and NLP Basics
 ---
 
@@ -43,21 +35,6 @@ Relevant read: [Introduction to Neural Information Retrieval](https://www.micros
 
 **PPT Slides**
 
-[Slides: Module Introduction](https://docs.google.com/presentation/d/11T7WKKYjZfMdAcg2ZGidZkc6jA4qBh9t/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
-[Slides: What is NLP?](Link pending)
-
-[Slides: Back-to-basics: Boolean Retrieval](Link pending)  
-
-**PPT Slides [on-demand]:**
-
-[Slides: Intersecting Posting Lists](https://docs.google.com/presentation/d/1hbbBHrPfeyQZ5pPqRV88EMRV_I1VtiWA/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
-
- **Recordings for the PPTs [on-demand]:**
-
-[Recording: Boolean Retrieval recording](https://drive.google.com/file/d/1l2qA8-pmhZtEnVjQ1j71oelq4USnQj7M/view?usp=sharing) (18 mins)
-
-[Recording: Intersecting Posting Lists recording](https://drive.google.com/file/d/1EP8TmDTfUyVqVxqI8osZ-NSgzrhAqlT6/view?usp=sharing) (7 mins)
 
 **Lab Tutorials (Tutorial 1)**
 
