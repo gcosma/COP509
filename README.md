@@ -85,19 +85,13 @@ Notes: Ratings start from **1** to **5**, but the result of ***to_categorical()*
 
 **PPT Slides**
 
-
-**Reading**
-
-[A Tale of Two Encodings: Comparing Bag-of-Words and Word2vec for VQA](https://www.cs.princeton.edu/courses/archive/spring18/cos598B/public/projects/System/COS598B_spr2018_TwoEncodings.pdf)
-
-
 **Week 3 Tutorials**
 
-For the labs, you will focus on Text Classification with Deep Learning.
+For the labs, you will focus on Text Classification with Deep Learning. (Put in Github)
 
-1. Colab page: [Word Embedding Representation](https://colab.research.google.com/drive/1ylqlTKgTX_AVUgkrPYvuTJmP8V33gKse?usp=sharing)
+1. Colab page: [Word Embedding Representation](https://github.com/gcosma/COP509/blob/main/Tutorials/Week3aWordEmbeddingRepresentation.ipynb)
 
-2. Colab page: [Learned Embedding](https://colab.research.google.com/drive/1YBTq8whaCg4EGRZkRHlRDQt7b3nNDZSP?usp=sharing)
+2. Colab page: [Learned Embedding](https://github.com/gcosma/COP509/blob/main/Week3bLearnedEmbedding.ipynb)
 
 3. Colab: [Deep Convolutional Neural Network for Sentiment Analysis (Text Classification)](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial3CNNforSentimentAnalysis.ipynb)
 
@@ -156,7 +150,7 @@ Apply Topic Modelling to the lab datasets.
 
 **Lab Tutorial (Tutorial 5)**
 
-Colab: [Evaluation Measures](https://colab.research.google.com/drive/1XZc5cx3GKTUYJhLZjWgWyobkrGFd6nfA?usp=sharing)
+Colab: [Evaluation Measures](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial5PlotRecallPrecision.ipynb)
 
 **Lab Exercise (No. 4b)**
 
@@ -187,8 +181,6 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 
 **PPT Slides**
 
-**Lecture Material/Tutorial on Sentiment Analysis with BERT**
-9:00-9:45 - [NLP with BERT] (https://docs.google.com/presentation/d/1XRQe7xXQ8A8nn8GTuWaHkDhx-VIHvq9Q/edit?usp=sharing&ouid=110090632559945494350&rtpof=true&sd=true)
 
 **Tutorial 6**
 14:00-15:00
@@ -212,9 +204,9 @@ Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000
 
 **Tutorials 7 and 8**
 
-[A notebook provided by me] (https://drive.google.com/file/d/1JdYX3reNpYl9NWwZUAVkTd81zzQEViwi/view?usp=drive_link)
+[Summarisation with user pasted data] (https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb)
 
-Colab: [Hugging Face Summarisation Tutorial](https://colab.research.google.com/drive/18bvbLe2Eh6YmqzlD5JnS205MGieW9yLl?usp=drive_link)
+Colab: [Hugging Face Summarisation Tutorial](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb)
 
 **Lab Exercise (No. 6)**
 
@@ -255,7 +247,6 @@ Read paper Deduplicating Training Data Makes Language Models Better https://arxi
 
 Workshop activity:
 1. Read the [deduplication paper](https://arxiv.org/pdf/2107.06499)
-
 
 #Week 10: DeepSeek Workshop
 
