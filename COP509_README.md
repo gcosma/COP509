@@ -110,11 +110,6 @@ All datasets for tutorials and exercises are available in the [TutorialDatasets]
 4. Retrieve top 20 results for queries:
    - `'I really enjoy these scissors!'`
    - `'I hate the pen!'`
-
-**Resources:**
-- [LSA Lab Code](https://github.com/gcosma/COP509/blob/main/LabSolutions/Lab_Exercise_(No_4a).ipynb)
-- [BERTopic Tutorial](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial9BERTopic.ipynb) (Topic Modelling)
-
 ---
 
 ### Week 5: Evaluation Measures
