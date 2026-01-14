@@ -33,9 +33,9 @@ This module provides a comprehensive introduction to Natural Language Processing
 | 6 | 10th Mar | Transformer Models & Guest Presentation (Dr Mikel W.) | [📖 Transformers](https://github.com/gcosma/COP509/tree/main/Slides/8.TransformerModels.pdf) | [Tutorial 6](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb) | [Lab 5](#week-6-transformer-models) |
 | 7 | 17th Mar | Text Summarisation & Guest Lecture (Petros A.) | [📖 Summarisation](https://github.com/gcosma/COP509/tree/main/Slides/9.Summarisation.pdf) | [Tutorial 7a](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb) · [Tutorial 7b](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb) | [Lab 6 & 7](#week-7-text-summarisation) |
 | — | — | **Easter Break (3 weeks)** | — | — | — |
-| 8 | 14th Apr | Deduplication | [📖 Deduplication](https://github.com/gcosma/COP509/tree/main/Slides/10.DeduplicatingTrainingData.pdf) | AI Ethics | [Workshop](#week-8-deduplication) |
-| 9 | 21st Apr | Hashing & Coursework Q&A | [📖 MinHash](https://github.com/gcosma/COP509/tree/main/Slides/Optional:MinHash.pdf) | — | — |
-| 10 | 28th Apr | Company Presentations & Coursework Q&A | — | — | — |
+| 8 | 14th Apr | Deduplication and Hashing | [📖 Deduplication](https://github.com/gcosma/COP509/tree/main/Slides/10.DeduplicatingTrainingData.pdf) · [📖 MinHash](https://github.com/gcosma/COP509/tree/main/Slides/Optional:MinHash.pdf) | AI Ethics | [Workshop](#week-8-deduplication) |
+| 9 | 21st Apr | RAGS & Coursework Q&A |  | A tutorial on RAG | — |
+| 10 | 28th Apr | Coursework Q&A | — | — | — |
 
 ---
 
