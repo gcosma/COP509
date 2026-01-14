@@ -18,7 +18,7 @@ This module provides a comprehensive introduction to Natural Language Processing
 **Sessions:** Mondays 10:00–12:00 (lecture and tutorial), 12:00-13:00 (lab) 
 **Assessment:** Coursework (released Week 2)
 **Module Leader:** Professor Georgina Cosma (g.cosma@lboro.ac.uk)
-**Teaching Assistant:** Petros Andreou 
+**Teaching Assistant:** Petros Andreou (PhD student in AI)
 
 ---
 
@@ -32,7 +32,7 @@ This module provides a comprehensive introduction to Natural Language Processing
 | 4 | 24th Feb | Similarity & Guest Lecture (Dr Mikel W.) | [📖 Similarity](https://github.com/gcosma/COP509/tree/main/Slides/5.Similarity.pdf) | How to build a chatbot (Dr. Mikel W.)  | How to build a chatbot (lab) (Dr. Mikel W.) |
 | 5 | 3rd Mar | LSI for Information Retrieval & Evaluation Measures | [📖 LSI](https://github.com/gcosma/COP509/tree/main/Slides/6.LSI.pdf) · [📖 Evaluation](https://github.com/gcosma/COP509/tree/main/Slides/7.EvaluationMeasures.pdf) |  [Tutorial 4](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial4LSA.ipynb) · [Tutorial 5](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial5PlotRecallPrecision.ipynb) | [Lab 4a](#week-4-lsi-for-information-retrieval) · [Lab 4b](#week-5-evaluation-measures) |
 | 6 | 10th Mar | Transformer Models & Guest Presentation | [📖 Transformers](https://github.com/gcosma/COP509/tree/main/Slides/8.TransformerModels.pdf) | [Tutorial 6](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb) | [Lab 5](#week-6-transformer-models) |
-| 7 | 17th Mar | Text Summarisation & Guest Presentation | [📖 Summarisation](https://github.com/gcosma/COP509/tree/main/Slides/9.Summarisation.pdf) | [Tutorial 7a](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb) · [Tutorial 7b](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb) | [Lab 6 & 7](#week-7-text-summarisation) |
+| 7 | 17th Mar | Text Summarisation & Guest Lecture (Petros A.) | [📖 Summarisation](https://github.com/gcosma/COP509/tree/main/Slides/9.Summarisation.pdf) | [Tutorial 7a](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb) · [Tutorial 7b](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb) | [Lab 6 & 7](#week-7-text-summarisation) |
 | — | — | **Easter Break (3 weeks)** | — | — | — |
 | 8 | 14th Apr | Deduplication | [📖 Deduplication](https://github.com/gcosma/COP509/tree/main/Slides/10.DeduplicatingTrainingData.pdf) | AI Ethics | [Workshop](#week-8-deduplication) |
 | 9 | 21st Apr | Hashing & Coursework Q&A | [📖 MinHash](https://github.com/gcosma/COP509/tree/main/Slides/Optional:MinHash.pdf) | — | — |
