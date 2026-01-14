@@ -37,8 +37,6 @@ Colab page: [Introduction to Colab for machine learning](https://colab.research.
 
 **About the module**
 
-**Slides**
-
 **Lab Tutorials (Tutorial 1)**
 
 Colab page: [How to Clean Text for Machine Learning with Python](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial1NLPcleanText.ipynb)
@@ -51,9 +49,6 @@ Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://github.
 
 # Week 2: Bag-Of-Words
 ---
-
-**PPT Slides**
-
 **Lab Tutorial (Tutorial 2)**
 
 Colab page: [How to Develop a Deep Learning Bag-of-Words Model for Sentiment Analysis (Text Classification)](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial2BagOfWords2.ipynb)
@@ -84,10 +79,6 @@ Notes: Ratings start from **1** to **5**, but the result of ***to_categorical()*
 
 # Week 3: NLP with Deep Learning and Word Embeddings
 ---
-
-**Lecture Material**
-
-**PPT Slides**
 
 **Week 3 Tutorials**
 
@@ -122,9 +113,6 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 # Week 4: LSI for Information Retrieval (non-machine learning)
 ---
 
-**Lecture Material**
-
-
 **Lab Exercise (No. 4a)**
 
 1. Your task is to read and understand the LSA lab exercise code. Apply and tune the LSA solution further. Apply more cleaning, try out different weightning schemes and tune using different SVD dimensions. 
@@ -143,7 +131,6 @@ Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://github.
 Apply Topic Modelling to the lab datasets.
 
 [**Tutorial 9 ** on BertTopic Modelling: BERTtopic tutorial](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial9BERTopic.ipynb)
-
 
 
 # Week 5: Evaluation Measures
@@ -176,9 +163,6 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 
 # Week 6: Transformer Models
 ---
-
-**Lecture Material**
-
 **Tutorial 6**
 14:00-15:00
 Colab: [A Visual Notebook to Using BERT for the First Time](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial6UsingBERTfortheFirstTime.ipynb)
@@ -243,18 +227,6 @@ Workshop activity:
 
 # Week 10: Recap and Q & A
 
-
-
-**COURSEWORK (will be released in week 2)**
-
-To export the code and outputs into a presentable format please see the recording by Yomi.
-[LINK](https://drive.google.com/file/d/19f4-jP835DZneKPk0N9BtxabtBweqaNl/view?usp=sharing)
-
-!jupyter nbconvert '/content/drive/My Drive/Colab Notebooks/BagOfWords2.ipynb' &> /dev/null
-
-[Coursework Datasets (Available here)]()
-
-
 **Lab Solutions**
 
 Please attempt to solve the labs on your own first. **Avoid the temptation of looking at these before you try to solve them first**
@@ -276,6 +248,17 @@ Lab Exercise (No. 5)
 Lab Exercise (No. 6)
 
 Lab Exercise (No. 7)
+
+
+**COURSEWORK (will be released in week 2)**
+
+To export the code and outputs into a presentable format please see the recording by Yomi.
+[LINK](https://drive.google.com/file/d/19f4-jP835DZneKPk0N9BtxabtBweqaNl/view?usp=sharing)
+
+!jupyter nbconvert '/content/drive/My Drive/Colab Notebooks/BagOfWords2.ipynb' &> /dev/null
+
+[Coursework Datasets (Available here)]()
+
 
 
 **Other**
