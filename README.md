@@ -6,15 +6,17 @@
 **Module Overview**
 You will learn how to process text data for information retrieval, classification and summarisation. All sessions are on Mondays 10-12.
 
-| Week               | Topic          |
-| :---------                 | :------------------ |
+| Week       | Topic          |
+| :--------- | :------------------ |
 | Week 1     | Introduction to the module and NLP basics|   
-| Week 2     | Bag of Words|  
-| Week 3   | NLP with Deep Learning and Word Embeddings|   
-| Week 4     | LSI for Information Retrieval|
-| Week 5-6     | Evaluation Measures. Coursework released and explained.|
-| Week 7-8     | Sentiment Analysis with BERT, Text Summarisation with GPT. |   
-| Week 9   | Petros and Mikel's presentations. Deduplication and Deduplication workshop|
+| Week 2     | Bag of Words (VSM Parts 1-2), Coursework released and explained.|  
+| Week 3     | Bag of Words (VSM Parts 3-4), Similarity, How to buid a chatbot? (Dr Mikel W.) |   
+| Week 4     | LSI for Information Retrieval, Evaluation measures|
+
+| Week 5     | Evaluation Measures, Petro's Presentation|
+| Week 6     | Text summarisation, Mikel's presentation|
+| Week 7-8   | |   
+| Week 9     | |
 | Week 10    |Company presentations. DeepSeek workshop, Coursework Q&A|   
 
 
@@ -142,12 +144,8 @@ Apply Topic Modelling to the lab datasets.
 
 
 
-# Week 5-6: Evaluation Measures
-
+# Week 5: Evaluation Measures
 ---
-
-**Lecture Material**
-
 **Lab Tutorial (Tutorial 5)**
 
 Colab: [Evaluation Measures](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial5PlotRecallPrecision.ipynb)
@@ -174,13 +172,10 @@ Relevant_ID = [[24,337,500,959,1346,1537,1746,1761,1892,2128,2185,2339,2603,3161
 [224,353,368,415,462,571,856,880,903,906,1377,1532,1784,1901,2061,2690,2719,3380,3925,4164,4279,4833,4852]]
 
 
-# Week 7-8: Sentiment Analysis with BERT
+# Week 6: Transformer Models
 ---
 
 **Lecture Material**
-
-**PPT Slides**
-
 
 **Tutorial 6**
 14:00-15:00
@@ -195,14 +190,9 @@ Use the top **500** data 'ArtsReviews_5000_test.txt'* and and *'ArtsRatings_5000
 [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
 
 
-# Week 9: Text Summarisation
+# Week 7: Text Summarisation
 ---
-
-**Lecture Material**
-
-**PPT Slides**
-
-**Tutorials 7 and 8**
+**Tutorials 7**
 
 [Summarisation with user pasted data] (https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb)
 
@@ -238,22 +228,20 @@ Your task is to apply text summarisation to the ArtReviews dataset using abstarc
 Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 [Dataset can be found here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 
-
-# Week 10: Research Talks and Deduplication Workshop
+# Week 8: Deduplication 
 ---
-** Research talks **
-
 Read paper Deduplicating Training Data Makes Language Models Better https://arxiv.org/abs/2107.06499
 
 Workshop activity:
 1. Read the [deduplication paper](https://arxiv.org/pdf/2107.06499)
 
-#Week 10: DeepSeek Workshop
+# Week 9: Hashing  
 
-*Please attend as we will be working in groups
-
-Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
+
+# Week 10: Recap and Q & A
+
+
 
 **COURSEWORK (will be released in week 2)**
 
