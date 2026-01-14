@@ -6,18 +6,19 @@
 **Module Overview**
 You will learn how to process text data for information retrieval, classification and summarisation. All sessions are on Mondays 10-12.
 
-| Week       | Topic          |
-| :--------- | :------------------ |
-| Week 1     | Introduction to the module and NLP basics|   
-| Week 2     | Bag of Words (VSM Parts 1-2), Coursework released and explained.|  
-| Week 3     | Bag of Words (VSM Parts 3-4), Similarity, How to buid a chatbot? (Dr Mikel W.) |   
-| Week 4     | LSI for Information Retrieval, Evaluation measures|
-
-| Week 5     | Evaluation Measures, Petro's Presentation|
-| Week 6     | Text summarisation, Mikel's presentation|
-| Week 7-8   | |   
-| Week 9     | |
-| Week 10    |Company presentations. DeepSeek workshop, Coursework Q&A|   
+| Week       | Topic          | |
+| :--------- | :------------------ ||
+| Week 1     | Introduction to the module, NLP, Boolean Retrieval, and	Text Cleaning|2nd Feb|
+| Week 2     | Bag of Words (VSM Parts 1-2), Coursework released and explained|9th Feb|
+| Week 3     | Bag of Words (VSM Parts 3-4)|16th Feb|
+| Week 4     | Similarity, How to buid a chatbot (Dr Mikel W.) |23rd Feb|
+| Week 5     | LSI for Information Retrieval, Evaluation measures|2nd March|
+| Week 6     | Transformer Models, Petro's Presentation|9th March|
+| Week 7     | Deduplication|16th March|
+| Week 8     | Text summarisation, Mikel's presentation|6th April|
+| Week 9     | Deduplication|13th April|
+| Week 9     | Hashing. Coursework Q&A|20th April|
+| Week 10    |Company presentations. Coursework Q&A|27th April|
 
 
 ## How to setup your Google drive for Colab tutorials and labs
