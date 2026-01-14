@@ -43,7 +43,7 @@ Colab page: [How to Clean Text for Machine Learning with Python](https://github.
 
 Your task is to clean the Art Rating dataset that has been provided to you.Great if you can explore both manual and NLTK approaches.
 
-Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
+Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)g)
 
 # Week 2: Bag-Of-Words
 ---
