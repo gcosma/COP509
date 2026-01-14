@@ -15,13 +15,9 @@
 This module provides a comprehensive introduction to Natural Language Processing, covering foundational techniques through to modern deep learning approaches. You will gain hands-on experience with text preprocessing, vector space models, semantic analysis, transformer architectures, and text summarisation.
 
 **Module Lead:** Professor Georgina Cosma  
-
 **Sessions:** Mondays 10:00–12:00 (lecture and tutorial), 12:00-13:00 (lab) 
-
 **Assessment:** Coursework (released Week 2)
-
 **Module Leader:** Professor Georgina Cosma (g.cosma@lboro.ac.uk)
-
 **Teaching Assistant:** Petros Andreou (PhD student in AI)
 
 ---
