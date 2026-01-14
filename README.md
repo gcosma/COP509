@@ -111,7 +111,7 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 **Instructions and Tips for the lab exercise:**
 
-1. [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
+1. [Dataset can be found here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 
 2. Use *'ArtsReviews_5000_train.txt'* and *'ArtsRatings_5000_train.txt'* for training;
 
@@ -139,7 +139,7 @@ Run this Coladb code: [LSA lab](https://github.com/gcosma/COP509/blob/main/LabSo
 
 **Instructions for the Lab Exercise**
 
-Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing).
+Use the dataset of *'Reduced_ArtsReviews_5000.txt'* found [here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets).
 
 #Topic Modelling
 Apply Topic Modelling to the lab datasets.
@@ -168,7 +168,7 @@ Building on from the previous lab
 
 **Instructions and Tips for the Lab Exercise**
 
-1. Use the dataset of *'Reduced_ArtsReviews_5000.txt'*. [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
+1. Use the dataset of *'Reduced_ArtsReviews_5000.txt'*. [Dataset can be found here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 
 2. You can program for computing *Recall*, *Precision*, and *F1-measure* and plotting *Recall/Precision curves*.
 
@@ -244,7 +244,7 @@ Your task is to apply text summarisation to the ArtReviews dataset using abstarc
 
 **Instructions for Lab Exercise**
 Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
-[Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
+[Dataset can be found here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 
 
 # Week 10: Research Talks and Deduplication Workshop
@@ -255,7 +255,7 @@ Read paper Deduplicating Training Data Makes Language Models Better https://arxi
 
 Workshop activity:
 1. Read the [deduplication paper](https://arxiv.org/pdf/2107.06499)
-2. [Deduplication Workshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
+
 
 #Week 10: DeepSeek Workshop
 
@@ -263,11 +263,8 @@ Workshop activity:
 
 Workshop 2 activity:
   1. Read the [DeepSeek paper](https://arxiv.org/pdf/2401.02954)
-  2. [DeepSeek Worshop](https://drive.google.com/drive/folders/1sTnjkkkex-IkS1j-_K7EhlZ_rTWiTdyW)
-
 
 **COURSEWORK (will be released in week 2)**
-
 
 To export the code and outputs into a presentable format please see the recording by Yomi.
 [LINK](https://drive.google.com/file/d/19f4-jP835DZneKPk0N9BtxabtBweqaNl/view?usp=sharing)
