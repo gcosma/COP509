@@ -10,14 +10,14 @@ All sessions are on Mondays 10–12.
 | Week   | Topic                                                                 | Date       |
 |--------|-----------------------------------------------------------------------|------------|
 | Week 1 | Introduction to the module, NLP, Boolean Retrieval, and Text Cleaning  | 2nd Feb    |
-| Week 2 | Bag of Words (VSM Parts 1–2), Coursework released and explained         | 9th Feb    |
+| Week 2 | Bag of Words (VSM Parts 1–2), Coursework released and explained        | 9th Feb    |
 | Week 3 | Bag of Words (VSM Parts 3–4)                                           | 16th Feb   |
 | Week 4 | Similarity, How to build a chatbot (Dr Mikel W.)                       | 23rd Feb   |
 | Week 5 | LSI for Information Retrieval, Evaluation measures                     | 2nd March  |
 | Week 6 | Transformer Models, Petro's Presentation                               | 9th March  |
-| Week 7 | Deduplication                                                          | 16th March |
-| Week 8 | Text summarisation, Mikel's presentation                               | 6th April  |
-| Week 9 | Deduplication                                                          | 13th April |
+| Week 7 | Text summarisation, Mikel's presentation                               | 16th March |
+|        | Easter 3 weeks                                                         |             |
+| Week 8 | Deduplication                                                          | 13th April |
 | Week 9 | Hashing. Coursework Q&A                                                | 20th April |
 | Week 10| Company presentations. Coursework Q&A                                  | 27th April |
 
