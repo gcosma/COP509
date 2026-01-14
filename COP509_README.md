@@ -99,7 +99,7 @@ All datasets for tutorials and exercises are available in the [TutorialDatasets]
 
 ---
 
-### Week 4: LSI for Information Retrieval
+### Week 5: LSI for Information Retrieval
 
 **Lab Exercise 4a:** Implement and tune Latent Semantic Analysis.
 
