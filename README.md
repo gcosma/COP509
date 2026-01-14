@@ -66,7 +66,7 @@ Your task is to use the cleaned ArtReviews dataset and the ArtRatings(classes) a
 
 **Instructions for Lab Exercise**
 
-[Datasets are found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
+[Datasets are found here](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 
 1. Use *'ArtsReviews_5000_train.txt'* and *'ArtsRatings_5000_train.txt'* for training;
 
@@ -246,8 +246,6 @@ Your task is to apply text summarisation to the ArtReviews dataset using abstarc
 Use the top **10** reviews of *'Reduced_ArtsReviews_5000.txt'*.
 [Dataset can be found here](https://drive.google.com/drive/folders/1-Oc4jOFWZCJBXZeGCiQvPRM8TN5VDvy4?usp=sharing)
 
-**Other**
-[SummerTime Library for Text Summarisation and Evaluation GitHub] (https://github.com/Yale-LILY/SummerTime) [ONLY FOR LEARNING - The code no longer works]
 
 # Week 10: Research Talks and Deduplication Workshop
 ---
@@ -276,9 +274,8 @@ To export the code and outputs into a presentable format please see the recordin
 
 !jupyter nbconvert '/content/drive/My Drive/Colab Notebooks/BagOfWords2.ipynb' &> /dev/null
 
-[Coursework Datasets (Available here)](https://drive.google.com/drive/folders/1oGaiswHyhiiaR7gk51pO7N8CDPZKBhLK?usp=share_link)
+[Coursework Datasets (Available here)]()
 
-[COURSEWORK FILE (provided on LEARN)]
 
 **Lab Solutions**
 
