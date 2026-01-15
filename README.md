@@ -22,6 +22,9 @@ This module provides a comprehensive introduction to Natural Language Processing
 ---
 ## 🗓️ Schedule & Materials
 
+**Slides will be made available soon**
+
+
 | Week | Date | Topic | Lecture | Tutorial | Lab Exercise |
 |:----:|:----:|:------|:-------:|:--------:|:------------:|
 | 1 | 3rd Feb | Introduction to NLP, Boolean Retrieval & Text Cleaning | [📖 NLP Intro](https://github.com/gcosma/COP509/tree/main/Slides/1.WhatisNLP.pdf) · [📖 Boolean](https://github.com/gcosma/COP509/tree/main/Slides/2.BooleanRetrieval.pdf) · [📖 Cleaning](https://github.com/gcosma/COP509/tree/main/Slides/3.TextCleaning.pdf) | [Tutorial 1](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial1NLPcleanText.ipynb) | [Lab 1](#week-1-introduction-to-nlp) |
@@ -33,7 +36,7 @@ This module provides a comprehensive introduction to Natural Language Processing
 | 7 | 17th Mar | Text Summarisation & Guest Lecture (Petros A.) | [📖 Summarisation](https://github.com/gcosma/COP509/tree/main/Slides/9.Summarisation.pdf) | [Tutorial 7a](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb) · [Tutorial 7b](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb) | [Lab 6 & 7](#week-7-text-summarisation) |
 | — | — | **Easter Break (3 weeks)** | — | — | — |
 | 8 | 14th Apr | Deduplication and Hashing | [📖 Deduplication](https://github.com/gcosma/COP509/tree/main/Slides/10.DeduplicatingTrainingData.pdf) · [📖 MinHash](https://github.com/gcosma/COP509/tree/main/Slides/Optional:MinHash.pdf) | AI Ethics | [Workshop](#week-8-deduplication) |
-| 9 | 21st Apr | RAGS & Coursework Q&A |  | [📖 A tutorial on RAG] (https://github.com/gcosma/COP509/blob/main/Tutorials/TutorialRAG.ipynb) | — |
+| 9 | 21st Apr | RAGS & Coursework Q&A |  | [📖 A tutorial on RAG](https://github.com/gcosma/COP509/blob/main/Tutorials/TutorialRAG.ipynb) | — |
 | 10 | 28th Apr | Coursework Q&A | — | — | — |
 
 ---
