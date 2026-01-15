@@ -20,7 +20,7 @@ This module provides a comprehensive introduction to Natural Language Processing
 **Assessment:** Coursework (released Week 2)  
  
 ---
-
+** Note: Slides will be made available soon **
 ## 🗓️ Schedule & Materials
 
 | Week | Date | Topic | Lecture | Tutorial | Lab Exercise |
