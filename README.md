@@ -66,6 +66,18 @@ All datasets for tutorials and exercises are available in the [TutorialDatasets]
 - **Dataset:** [`Reduced_ArtsReviews_5000.txt`](https://github.com/gcosma/COP509/tree/main/TutorialDatasets)
 - **Tutorial:** [Text Cleaning for Machine Learning](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial1NLPcleanText.ipynb)
 
+**Lab Exercise 2:** Courswork related
+  
+- **Datasets:** [Coursework Dataets](https://github.com/gcosma/COP509/tree/main/CWdatasets).
+
+Tasks
+
+1. Examine the datasets and understand their structure
+2. Extract text from PDFs while maintaining the original document structure
+3. Create a Colab notebook that takes a PDF document as input and extracts the text
+
+Question to answer: Why is it important to maintain document structure when extracting text from PDFs?
+
 ---
 
 ### Week 2: Bag of Words
