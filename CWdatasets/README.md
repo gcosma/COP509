@@ -23,9 +23,9 @@ The dataset comprises pairs of publicly available UK government inquiry document
 
 This dataset is designed for the COP509 coursework.
 
-## Data Preparation Notes
+## Data Pairing Notes (supportive info)
 
-- Document pairs have been aligned using Claude AI (therefore there may be alignment errors). This was  done for convenience to provide a starting point for the coursework)
+- Recommendations and Responses from each document pair have been aligned using Claude AI (therefore there may be alignment errors). This was  done for convenience to provide a starting point for the coursework). 
 
 ## Coursework Requirements
 
