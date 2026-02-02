@@ -68,7 +68,7 @@ All datasets for tutorials and exercises are available in the [TutorialDatasets]
 
 **Lab Exercise 2:** Courswork related
   
-- **Datasets:** [Coursework Dataets](https://github.com/gcosma/COP509/tree/main/CWdatasets).
+- **Datasets:** [Coursework Datasets](https://github.com/gcosma/COP509/tree/main/CWdatasets).
 
 Tasks
 
