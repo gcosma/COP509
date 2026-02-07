@@ -14,11 +14,11 @@
 
 This module provides a comprehensive introduction to Natural Language Processing, covering foundational techniques through to modern deep learning approaches. You will gain hands-on experience with text preprocessing, vector space models, semantic analysis, transformer architectures, and text summarisation.
 
-*Module Leader:* Professor Georgina Cosma (g.cosma@lboro.ac.uk)  
-*Teaching Assistant:* Petros Andreou (PhD student in AI)  
-*Sessions:** Mondays 10:00–12:00 (lecture and tutorial), 12:00-13:00 (lab)  
-*Assessment:* Coursework (released Week 2)  
-*About the module* [COP509-NLP](https://lucas.lboro.ac.uk/pub-apx/f?p=510:SPECIFICATION::APEX_CLONE_SESSION::110:MOD_CODE,MOD_YEAR:25COP509,25#lo)
+Module Leader: Professor Georgina Cosma (g.cosma@lboro.ac.uk)  
+Teaching Assistant: Petros Andreou (PhD student in AI)  
+Sessions: Mondays 10:00–12:00 (lecture and tutorial), 12:00-13:00 (lab)  
+Assessment: Coursework (released Week 2)  
+About the module [COP509-NLP](https://lucas.lboro.ac.uk/pub-apx/f?p=510:SPECIFICATION::APEX_CLONE_SESSION::110:MOD_CODE,MOD_YEAR:25COP509,25#lo)
 ---
 ## 🗓️ Schedule & Materials
 
