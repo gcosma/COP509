@@ -1,0 +1,6 @@
+openai
+fastapi
+uvicorn
+python-dotenv
+inspect-ai
+inspect-evals

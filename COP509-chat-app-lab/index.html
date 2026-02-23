@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COP509 — Chatbot Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #10061a;
+            --bg-primary: #150b22;
+            --bg-secondary: #1c1030;
+            --bg-tertiary: #241540;
+            --surface: #2e1d4a;
+            --border: #3a2858;
+
+            --text-primary: #f0edf5;
+            --text-secondary: #b0a8c0;
+            --text-muted: #6e6280;
+
+            --magenta: #d4006a;
+            --magenta-light: #e8187e;
+            --magenta-dim: rgba(212, 0, 106, 0.15);
+            --magenta-glow: rgba(212, 0, 106, 0.30);
+            --purple-mid: #7b2d8e;
+
+            --error-bg: #2d1525;
+            --error-border: #5c2040;
+            --error-text: #f0a0b8;
+
+            --sidebar-w: 280px;
+            --col-max: 720px;
+
+            --font-body: 'Outfit', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            height: 100vh;
+            display: flex;
+        }
+
+        /* ════════════════════════════════
+           SIDEBAR
+           ════════════════════════════════ */
+        .sidebar {
+            width: var(--sidebar-w);
+            flex-shrink: 0;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 16px 0;
+            overflow-y: auto;
+        }
+
+        .sidebar-brand {
+            padding: 0 16px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-badge {
+            background: var(--magenta);
+            color: white;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 3px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.03em;
+        }
+
+        .brand-text {
+            font-weight: 600;
+            font-size: 19px;
+        }
+
+        .sidebar-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 0 16px;
+        }
+
+        .sidebar-section {
+            padding: 14px 0 10px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-section-header {
+            display: block;
+            padding: 0 16px 10px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.06em;
+        }
+
+        .sidebar-label {
+            display: block;
+            padding: 8px 16px 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            font-size: 18px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+            width: 100%;
+        }
+
+        .nav-item:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .nav-item.active {
+            background: var(--magenta-dim);
+            color: var(--magenta-light);
+        }
+
+        .nav-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            opacity: 0.7;
+        }
+
+        .nav-item.active svg { opacity: 1; }
+
+        .sidebar-spacer { flex: 1; }
+
+        /* ── Model dropdown (input toolbar) ── */
+        .model-dropdown {
+            position: relative;
+        }
+
+        .model-dropdown-trigger {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 8px;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            white-space: nowrap;
+            max-width: 200px;
+        }
+
+        .model-dropdown-trigger:hover {
+            color: var(--text-secondary);
+            background: var(--bg-tertiary);
+        }
+
+        .model-dropdown-trigger svg {
+            flex-shrink: 0;
+            opacity: 0.6;
+            transition: transform 0.15s ease;
+        }
+
+        .model-dropdown.open .model-dropdown-trigger svg {
+            transform: rotate(180deg);
+        }
+
+        .model-dropdown-trigger span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .model-dropdown-menu {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 6px);
+            right: 0;
+            min-width: 100%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+        }
+
+        .model-dropdown.open .model-dropdown-menu {
+            display: block;
+            animation: dropIn 0.12s ease-out;
+        }
+
+        @keyframes dropIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .model-dropdown-item {
+            display: block;
+            width: 100%;
+            padding: 7px 10px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 14px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.1s ease;
+            white-space: nowrap;
+        }
+
+        .model-dropdown-item:hover {
+            background: var(--surface);
+            color: var(--text-primary);
+        }
+
+        .model-dropdown-item.active {
+            color: var(--magenta-light);
+        }
+
+        .history-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0 8px;
+            max-height: 240px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--surface) transparent;
+        }
+
+        .history-item {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+            white-space: nowrap;
+            overflow: clip;
+            text-overflow: ellipsis;
+            line-height: 1.4;
+        }
+
+        .history-item:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .history-item.active {
+            background: var(--magenta-dim);
+            color: var(--magenta-light);
+        }
+
+        .history-empty {
+            padding: 4px 16px;
+            font-size: 15px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ════════════════════════════════
+           MAIN AREA
+           ════════════════════════════════ */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        /* ── Welcome state ── */
+        body.state-welcome main {
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 80px;
+        }
+
+        .welcome-greeting {
+            text-align: center;
+            margin-bottom: 32px;
+            display: none;
+        }
+
+        body.state-welcome .welcome-greeting { display: block; }
+
+        .welcome-greeting h1 {
+            font-size: 35px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+        }
+
+        .welcome-hint {
+            margin-top: 12px;
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .welcome-hint kbd {
+            display: inline-block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Hide chat container in welcome */
+        body.state-welcome #chat-container { display: none; }
+
+        /* Welcome input: centered, no top border */
+        body.state-welcome #input-area {
+            width: 100%;
+            max-width: var(--col-max);
+            border-top: none;
+            background: transparent;
+            padding: 0 24px;
+        }
+
+        /* ── Chat state ── */
+        body.state-chat .welcome-greeting { display: none; }
+
+        body.state-chat #chat-container {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            scrollbar-width: thin;
+            scrollbar-color: var(--surface) transparent;
+        }
+
+        body.state-chat #chat-container::-webkit-scrollbar { width: 6px; }
+        body.state-chat #chat-container::-webkit-scrollbar-track { background: transparent; }
+        body.state-chat #chat-container::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 3px; }
+
+        #chat-column {
+            width: 100%;
+            max-width: var(--col-max);
+            padding: 32px 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        body.state-chat #input-area {
+            border-top: 1px solid var(--border);
+            background: var(--bg-primary);
+        }
+
+        /* ── Benchmark state ── */
+        #benchmark-panel { display: none; }
+
+        body.state-benchmark main {
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        body.state-benchmark .welcome-greeting { display: none; }
+        body.state-benchmark #chat-container { display: none; }
+        body.state-benchmark #input-area { display: none; }
+
+        body.state-benchmark #benchmark-panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            gap: 32px;
+            height: 100%;
+        }
+
+        /* ════════════════════════════════
+           INPUT AREA
+           ════════════════════════════════ */
+        #input-area {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            padding: 16px 24px 20px;
+        }
+
+        .input-column {
+            width: 100%;
+            max-width: var(--col-max);
+        }
+
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 8px 6px 12px;
+            transition: border-color 0.2s;
+        }
+
+        .input-box:focus-within { border-color: var(--magenta); }
+
+        .input-top-row {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 2px 4px 8px;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 18px;
+            font-family: var(--font-body);
+            font-weight: 400;
+            resize: none;
+            outline: none;
+            max-height: 120px;
+            line-height: 1.5;
+        }
+
+        #message-input::placeholder { color: var(--text-muted); }
+
+        .input-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 2px;
+        }
+
+        .input-toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .input-toolbar-right {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #send-btn {
+            background: var(--magenta);
+            color: white;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            margin-bottom: 2px;
+        }
+
+        #send-btn:hover { background: var(--magenta-light); transform: scale(1.04); }
+        #send-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+        #send-btn svg { width: 15px; height: 15px; }
+
+        .loading-dots { display: inline-flex; gap: 3px; align-items: center; }
+        .loading-dots span {
+            width: 4px; height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: dotPulse 1s ease-in-out infinite;
+        }
+        .loading-dots span:nth-child(2) { animation-delay: 0.15s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes dotPulse {
+            0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+            40% { opacity: 1; transform: scale(1); }
+        }
+
+        /* ════════════════════════════════
+           IMAGE UPLOAD (Extension A: Vision)
+           ════════════════════════════════ */
+        #image-upload-area {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #image-upload-btn {
+            background: none;
+            border: 1px solid var(--border);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-muted);
+            border-radius: 8px;
+            transition: all 0.15s ease;
+            flex-shrink: 0;
+        }
+
+        #image-upload-btn:hover { color: var(--magenta-light); background: var(--magenta-dim); }
+
+        #image-preview {
+            height: 32px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        #image-clear-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-muted);
+            transition: color 0.15s;
+        }
+
+        #image-clear-btn:hover { color: var(--error-text); }
+
+        .image-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 6px;
+            padding: 2px 8px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.85;
+        }
+
+        .image-tag svg {
+            width: 12px;
+            height: 12px;
+            flex-shrink: 0;
+        }
+
+        /* ════════════════════════════════
+           MESSAGES
+           ════════════════════════════════ */
+        .message {
+            max-width: 85%;
+            padding: 10px 16px;
+            border-radius: 12px;
+            line-height: 1.6;
+            font-size: 18px;
+            font-weight: 400;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            animation: msgIn 0.3s ease-out both;
+        }
+
+        @keyframes msgIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.user {
+            background: linear-gradient(135deg, var(--magenta) 0%, var(--purple-mid) 100%);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+            font-weight: 500;
+        }
+
+        .message.assistant {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .message.error {
+            background: var(--error-bg);
+            color: var(--error-text);
+            align-self: center;
+            border: 1px solid var(--error-border);
+            font-family: var(--font-mono);
+            font-size: 15px;
+        }
+
+        .typing-indicator::after {
+            content: "\2588";
+            color: var(--magenta-light);
+            animation: cursorBlink 0.8s step-end infinite;
+            margin-left: 1px;
+        }
+
+        @keyframes cursorBlink {
+            50% { opacity: 0; }
+        }
+
+        /* ════════════════════════════════
+           BENCHMARK PANEL (Extension C)
+           ════════════════════════════════ */
+        .bench-card {
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            animation: msgIn 0.3s ease-out both;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        .bench-card-header {
+            padding: 32px 32px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .bench-card-header svg {
+            width: 28px;
+            height: 28px;
+            color: var(--magenta-light);
+            margin-bottom: 10px;
+        }
+
+        .bench-card-header h2 {
+            font-size: 23px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .bench-card-header p {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .bench-card-body {
+            padding: 24px 32px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .bench-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .bench-field label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .bench-select {
+            width: 100%;
+            padding: 10px 32px 10px 12px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 18px;
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236e6280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            transition: border-color 0.15s ease;
+        }
+
+        .bench-select:focus { border-color: var(--magenta); }
+
+        .bench-run-btn {
+            width: 100%;
+            padding: 12px 0;
+            background: var(--magenta);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: var(--font-body);
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .bench-run-btn:hover { background: var(--magenta-light); }
+        .bench-run-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+        .bench-result {
+            margin: 0 32px 28px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            animation: msgIn 0.3s ease-out both;
+        }
+
+        .bench-accuracy {
+            font-family: var(--font-mono);
+            font-size: 53px;
+            font-weight: 600;
+            color: var(--magenta-light);
+            line-height: 1.1;
+        }
+
+        .bench-meta {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+
+        .bench-error {
+            margin: 0 32px 28px;
+            font-family: var(--font-mono);
+            font-size: 15px;
+            color: var(--error-text);
+            background: var(--error-bg);
+            border: 1px solid var(--error-border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            word-break: break-word;
+            animation: msgIn 0.3s ease-out both;
+        }
+
+        .bench-setup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 32px 28px;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .bench-spinner {
+            display: inline-flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .bench-spinner span {
+            width: 6px; height: 6px;
+            background: var(--magenta-light);
+            border-radius: 50%;
+            animation: dotPulse 1s ease-in-out infinite;
+        }
+
+        .bench-spinner span:nth-child(2) { animation-delay: 0.15s; }
+        .bench-spinner span:nth-child(3) { animation-delay: 0.3s; }
+
+        .bench-evaluating {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 20px 32px 28px;
+        }
+
+        .bench-eval-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .bench-progress-track {
+            width: 100%;
+            height: 6px;
+            background: var(--surface);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .bench-progress-bar {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--magenta), var(--magenta-light));
+            transition: width 0.6s ease;
+            width: 0%;
+        }
+
+        .bench-progress-bar.indeterminate {
+            width: 100%;
+            background: linear-gradient(
+                90deg,
+                var(--magenta) 0%,
+                var(--magenta-light) 50%,
+                var(--magenta) 100%
+            );
+            background-size: 200% 100%;
+            animation: progressShimmer 2s linear infinite;
+        }
+
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .bench-eval-counter {
+            font-family: var(--font-mono);
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* ── Two-column benchmark layout ── */
+        #benchmark-panel.bench-running {
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        #benchmark-panel.bench-running .bench-card {
+            flex-shrink: 0;
+            position: sticky;
+            top: 24px;
+        }
+
+        .bench-results-panel {
+            display: none;
+            flex: 1;
+            min-width: 0;
+            max-height: calc(100vh - 96px);
+            overflow-y: auto;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            scrollbar-width: thin;
+            scrollbar-color: var(--surface) transparent;
+        }
+
+        .bench-results-panel::-webkit-scrollbar { width: 6px; }
+        .bench-results-panel::-webkit-scrollbar-track { background: transparent; }
+        .bench-results-panel::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 3px; }
+
+        #benchmark-panel.bench-running .bench-results-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: msgIn 0.3s ease-out both;
+        }
+
+        .bench-results-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .bench-results-empty {
+            font-size: 16px;
+            color: var(--text-muted);
+            font-style: italic;
+            padding: 12px 0;
+        }
+
+        .bench-question-card {
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 3px solid var(--border);
+            animation: msgIn 0.3s ease-out both;
+        }
+
+        .bench-question-card.correct {
+            border-left-color: #2ecc71;
+        }
+
+        .bench-question-card.incorrect {
+            border-left-color: #e74c3c;
+        }
+
+        .bench-q-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .bench-q-number {
+            font-family: var(--font-mono);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .bench-q-badge {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .bench-q-badge.correct {
+            background: rgba(46, 204, 113, 0.15);
+            color: #2ecc71;
+        }
+
+        .bench-q-badge.incorrect {
+            background: rgba(231, 76, 60, 0.15);
+            color: #e74c3c;
+        }
+
+        .bench-q-text {
+            font-size: 16px;
+            color: var(--text-primary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .bench-q-choices {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .bench-q-choice {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 6px 10px;
+            background: var(--surface);
+            border-radius: 6px;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .bench-q-choice.model-pick {
+            border-color: #2ecc71;
+            background: rgba(46, 204, 113, 0.18);
+            color: #2ecc71;
+        }
+
+        .bench-q-choice.correct-answer {
+            border-color: #1a8a4a;
+            background: rgba(26, 138, 74, 0.15);
+            color: #1a8a4a;
+        }
+
+        .bench-q-choice.wrong-pick {
+            border-color: #e74c3c;
+            background: rgba(231, 76, 60, 0.15);
+            color: #e74c3c;
+        }
+
+        .bench-q-answers {
+            display: flex;
+            gap: 16px;
+            font-family: var(--font-mono);
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .bench-q-answers span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .bench-q-answers .answer-correct {
+            color: #2ecc71;
+        }
+
+        .bench-q-answers .answer-incorrect {
+            color: #e74c3c;
+        }
+
+        /* ── Benchmark history sidebar items ── */
+        .bench-history-item {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: left;
+            line-height: 1.4;
+        }
+
+        .bench-history-item:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .bench-history-item .bh-title {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .bench-history-item .bh-detail {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .bench-history-item .bh-accuracy {
+            font-family: var(--font-mono);
+            color: var(--magenta-light);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="state-welcome">
+
+<!-- ── Sidebar ── -->
+<aside class="sidebar">
+    <div class="sidebar-brand">
+        <span class="brand-badge">COP509</span>
+        <span class="brand-text">Lab</span>
+    </div>
+
+    <!-- Chatbot section -->
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+        <span class="sidebar-section-header">Chatbot</span>
+        <nav class="sidebar-nav">
+            <button class="nav-item" onclick="clearChat()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                New chat
+            </button>
+        </nav>
+        <span class="sidebar-label">Chat History</span>
+        <div class="history-list" id="history-list">
+            <span class="history-empty">No saved conversations</span>
+        </div>
+    </div>
+
+    <!-- Benchmarking section -->
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+        <span class="sidebar-section-header">Benchmarking</span>
+        <nav class="sidebar-nav">
+            <button class="nav-item" id="bench-nav-btn" style="display: none" onclick="transitionToBenchmark()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                New benchmark
+            </button>
+        </nav>
+        <div id="bench-history-section" style="display: none;">
+            <span class="sidebar-label">Benchmark History</span>
+            <div class="history-list" id="bench-history-list">
+                <span class="history-empty">No benchmark runs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-spacer"></div>
+</aside>
+
+<!-- ── Main area ── -->
+<main>
+    <div class="welcome-greeting" id="welcome-greeting">
+        <h1>What would you like to ask?</h1>
+        <p class="welcome-hint"><kbd>Enter</kbd> to send &middot; <kbd>Shift+Enter</kbd> for newline</p>
+    </div>
+
+    <div id="chat-container">
+        <div id="chat-column"></div>
+    </div>
+
+    <div id="benchmark-panel">
+        <div class="bench-card" id="bench-card">
+            <div class="bench-card-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                <h2>Run a Benchmark</h2>
+                <p>Evaluate model performance on standardised tasks</p>
+            </div>
+            <div class="bench-card-body">
+                <div class="bench-field">
+                    <label for="bench-select">Benchmark</label>
+                    <select class="bench-select" id="bench-select"></select>
+                </div>
+                <div class="bench-field">
+                    <label for="bench-model">Model</label>
+                    <select class="bench-select" id="bench-model"></select>
+                </div>
+                <div class="bench-field">
+                    <label for="bench-limit">Questions</label>
+                    <select class="bench-select" id="bench-limit"></select>
+                </div>
+                <button class="bench-run-btn" id="bench-run-btn" onclick="runBenchmark()">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    Run Benchmark
+                </button>
+            </div>
+            <div id="bench-output"></div>
+        </div>
+        <div class="bench-results-panel" id="bench-results-panel">
+            <div class="bench-results-title">Question Results</div>
+            <div class="bench-results-empty" id="bench-results-empty">Waiting for results...</div>
+        </div>
+    </div>
+
+    <div id="input-area">
+        <div class="input-column">
+            <div class="input-box">
+                <div class="input-top-row">
+                    <textarea id="message-input" rows="1" placeholder="Type a message..." autofocus></textarea>
+                    <button id="send-btn" onclick="sendMessage()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </div>
+                <div class="input-toolbar">
+                    <div class="input-toolbar-left">
+                        <div id="image-upload-area">
+                            <button id="image-upload-btn" title="Upload image">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </button>
+                            <img id="image-preview" style="display:none" />
+                            <button id="image-clear-btn" style="display:none" onclick="clearImage()">&times;</button>
+                            <input type="file" id="image-input" accept="image/*" style="display:none" />
+                        </div>
+                    </div>
+                    <div class="input-toolbar-right">
+                        <div class="model-dropdown" id="model-dropdown">
+                            <button class="model-dropdown-trigger" id="model-dropdown-trigger" type="button">
+                                <span id="model-dropdown-label">Loading...</span>
+                                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="model-dropdown-menu" id="model-dropdown-menu"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    // ── State ──
+    let history = [];
+    let currentImage = null;
+    let currentImageName = null;
+    let currentConversationId = null;
+
+    const chatColumn   = document.getElementById("chat-column");
+    const chatContainer = document.getElementById("chat-container");
+    const messageInput = document.getElementById("message-input");
+    const sendBtn      = document.getElementById("send-btn");
+    // ── Model dropdown ──
+    const modelDropdown = document.getElementById("model-dropdown");
+    const modelTrigger  = document.getElementById("model-dropdown-trigger");
+    const modelLabel    = document.getElementById("model-dropdown-label");
+    const modelMenu     = document.getElementById("model-dropdown-menu");
+    let currentModel    = null;
+
+    modelTrigger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        modelDropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+        modelDropdown.classList.remove("open");
+    });
+
+    function selectModel(model) {
+        currentModel = model;
+        modelLabel.textContent = model;
+        modelDropdown.classList.remove("open");
+        modelMenu.querySelectorAll(".model-dropdown-item").forEach(b => {
+            b.classList.toggle("active", b.dataset.model === model);
+        });
+    }
+
+    (async function loadModels() {
+        try {
+            const res = await fetch("/models");
+            if (!res.ok) return;
+            const models = await res.json();
+            if (!models.length) return;
+            modelMenu.innerHTML = "";
+            for (const m of models) {
+                const btn = document.createElement("button");
+                btn.className = "model-dropdown-item";
+                btn.dataset.model = m;
+                btn.textContent = m;
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    selectModel(m);
+                });
+                modelMenu.appendChild(btn);
+            }
+            selectModel(models[0]);
+        } catch (e) {
+            // models endpoint not available
+        }
+    })();
+
+    // ── State transitions ──
+    function setBodyState(state) {
+        document.body.classList.remove("state-welcome", "state-chat", "state-benchmark");
+        document.body.classList.add(state);
+    }
+
+    function transitionToChat() { setBodyState("state-chat"); }
+    function transitionToWelcome() { setBodyState("state-welcome"); }
+    function transitionToBenchmark() {
+        setBodyState("state-benchmark");
+        // Reset to centered card view for new benchmark
+        benchPanel.classList.remove("bench-running");
+        benchRenderedCount = 0;
+        benchRenderedIds = new Set();
+        benchResultsPanel.querySelectorAll(".bench-question-card").forEach(el => el.remove());
+        benchResultsEmpty.style.display = "";
+        benchOutput.innerHTML = "";
+        setBenchFormLocked(false);
+        benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Run Benchmark';
+        benchPhase = null;
+        if (benchPollId) {
+            clearInterval(benchPollId);
+            benchPollId = null;
+        }
+    }
+
+    // ── Clear chat ──
+    function clearChat() {
+        history = [];
+        currentConversationId = null;
+        chatColumn.innerHTML = "";
+        document.querySelectorAll(".history-item").forEach(b => b.classList.remove("active"));
+        transitionToWelcome();
+        messageInput.focus();
+    }
+
+    // ── Image handling (Extension A: Vision) ──
+    document.getElementById("image-upload-btn").addEventListener("click", () => {
+        document.getElementById("image-input").click();
+    });
+
+    document.getElementById("image-input").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            const base64 = reader.result.split(",")[1];
+            currentImage = base64;
+            currentImageName = file.name;
+            document.getElementById("image-preview").src = reader.result;
+            document.getElementById("image-preview").style.display = "block";
+            document.getElementById("image-clear-btn").style.display = "block";
+        };
+        reader.readAsDataURL(file);
+    });
+
+    function clearImage() {
+        currentImage = null;
+        currentImageName = null;
+        document.getElementById("image-input").value = "";
+        document.getElementById("image-preview").style.display = "none";
+        document.getElementById("image-clear-btn").style.display = "none";
+    }
+
+    // ── UI helpers ──
+    function addMessage(role, content, imageName) {
+        if (document.body.classList.contains("state-welcome")) {
+            transitionToChat();
+        }
+        const div = document.createElement("div");
+        div.className = "message " + role;
+        div.textContent = content;
+        if (imageName) {
+            const tag = document.createElement("span");
+            tag.className = "image-tag";
+            tag.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> ' + imageName;
+            div.appendChild(document.createElement("br"));
+            div.appendChild(tag);
+        }
+        chatColumn.appendChild(div);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+        return div;
+    }
+
+    function setLoading(loading) {
+        sendBtn.disabled = loading;
+        if (loading) {
+            sendBtn.innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span>';
+        } else {
+            sendBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+        }
+    }
+
+    // ── Auto-resize textarea ──
+    messageInput.addEventListener("input", () => {
+        messageInput.style.height = "auto";
+        messageInput.style.height = messageInput.scrollHeight + "px";
+    });
+
+    // ── Send on Enter (Shift+Enter for newline) ──
+    messageInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    // ── Main send function ──
+    async function sendMessage() {
+        const text = messageInput.value.trim();
+        if (!text) return;
+
+        addMessage("user", text, currentImage ? currentImageName : null);
+        messageInput.value = "";
+        messageInput.style.height = "auto";
+        setLoading(true);
+
+        const payload = {
+            message: text,
+            history: history,
+            model: currentModel
+        };
+
+        if (currentImage) {
+            payload.image = currentImage;
+        }
+
+        try {
+            await handleStreaming(payload, text);
+        } catch (err) {
+            addMessage("error", "Error: " + err.message);
+        }
+
+        clearImage();
+        setLoading(false);
+    }
+
+    // ── Streaming request (SSE) ──
+    async function handleStreaming(payload, userText) {
+        const msgDiv = addMessage("assistant", "");
+        msgDiv.classList.add("typing-indicator");
+
+        const res = await fetch("/chat/stream", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+            msgDiv.remove();
+            const errText = await res.text();
+            throw new Error(`${res.status} — ${errText}`);
+        }
+
+        let fullContent = "";
+
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split("\n");
+            buffer = lines.pop();
+
+            for (const line of lines) {
+                if (!line.startsWith("data: ")) continue;
+                const data = line.slice(6);
+                if (data === "[DONE]") continue;
+
+                try {
+                    const parsed = JSON.parse(data);
+                    if (parsed.content) {
+                        fullContent += parsed.content;
+                        msgDiv.textContent = fullContent;
+                        chatContainer.scrollTop = chatContainer.scrollHeight;
+                    }
+                } catch (e) {
+                    // skip malformed chunks
+                }
+            }
+        }
+
+        msgDiv.classList.remove("typing-indicator");
+
+        history.push({ role: "user", content: userText });
+        history.push({ role: "assistant", content: fullContent });
+
+        await saveConversation();
+    }
+
+    // ── Conversation persistence (Extension B) ──
+    async function saveConversation() {
+        if (!history.length) return;
+
+        if (!currentConversationId) {
+            currentConversationId = (crypto.randomUUID ? crypto.randomUUID() :
+                "xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx".replace(/[xy]/g, c =>
+                    ((c === "x" ? Math.random() * 16 : (Math.random() * 4 + 8)) | 0).toString(16)));
+        }
+
+        const firstUserMsg = history.find(m => m.role === "user");
+        const title = firstUserMsg
+            ? firstUserMsg.content.substring(0, 50)
+            : "Untitled";
+
+        try {
+            await fetch("/conversations", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: currentConversationId,
+                    title: title,
+                    messages: history
+                })
+            });
+            await refreshConversationList();
+        } catch (e) {
+            // Extension B not implemented yet — silently ignore
+        }
+    }
+
+    async function refreshConversationList() {
+        try {
+            const res = await fetch("/conversations");
+            if (!res.ok) return;
+            const conversations = await res.json();
+            const listEl = document.getElementById("history-list");
+
+            if (!conversations.length) {
+                listEl.innerHTML = '<span class="history-empty">No saved conversations</span>';
+                return;
+            }
+
+            listEl.innerHTML = "";
+            for (const conv of conversations) {
+                const btn = document.createElement("button");
+                btn.className = "history-item";
+                if (conv.id === currentConversationId) {
+                    btn.classList.add("active");
+                }
+                btn.textContent = conv.title || "Untitled";
+                btn.title = conv.title || "Untitled";
+                btn.addEventListener("click", () => loadConversation(conv.id));
+                listEl.appendChild(btn);
+            }
+        } catch (e) {
+            // Extension B not implemented yet — silently ignore
+        }
+    }
+
+    async function loadConversation(convId) {
+        try {
+            const res = await fetch(`/conversations/${convId}`);
+            if (!res.ok) return;
+            const data = await res.json();
+
+            history = data.messages || [];
+            currentConversationId = data.id;
+
+            chatColumn.innerHTML = "";
+            for (const msg of history) {
+                const div = document.createElement("div");
+                div.className = "message " + msg.role;
+                div.textContent = typeof msg.content === "string"
+                    ? msg.content
+                    : "(multimodal message)";
+                chatColumn.appendChild(div);
+            }
+
+            transitionToChat();
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            document.querySelectorAll(".history-item").forEach(b => {
+                b.classList.toggle("active", b.textContent === data.title);
+            });
+
+            await refreshConversationList();
+        } catch (e) {
+            // Extension B not implemented yet — silently ignore
+        }
+    }
+
+    // Load conversation list on startup
+    refreshConversationList();
+
+    // ── Benchmarking (Extension C) ──
+    const benchNavBtn       = document.getElementById("bench-nav-btn");
+    const benchSelect       = document.getElementById("bench-select");
+    const benchModel        = document.getElementById("bench-model");
+    const benchLimit        = document.getElementById("bench-limit");
+    const benchRunBtn       = document.getElementById("bench-run-btn");
+    const benchOutput       = document.getElementById("bench-output");
+    const benchPanel        = document.getElementById("benchmark-panel");
+    const benchResultsPanel = document.getElementById("bench-results-panel");
+    const benchResultsEmpty = document.getElementById("bench-results-empty");
+    let   benchPollId       = null;
+    let   benchPhase        = null;
+    let   benchRenderedCount = 0;
+    let   benchRenderedIds   = new Set();
+
+    (async function loadBenchmarks() {
+        try {
+            const [benchRes, modelsRes] = await Promise.all([
+                fetch("/benchmarks"),
+                fetch("/models"),
+            ]);
+            if (!benchRes.ok) return;
+            const data = await benchRes.json();
+
+            benchSelect.innerHTML = "";
+            for (const [key, label] of Object.entries(data.benchmarks)) {
+                const opt = document.createElement("option");
+                opt.value = key;
+                opt.textContent = label;
+                benchSelect.appendChild(opt);
+            }
+
+            benchLimit.innerHTML = "";
+            for (const n of data.limits) {
+                const opt = document.createElement("option");
+                opt.value = n;
+                opt.textContent = n + " questions";
+                benchLimit.appendChild(opt);
+            }
+
+            if (modelsRes.ok) {
+                const models = await modelsRes.json();
+                benchModel.innerHTML = "";
+                for (const m of models) {
+                    const opt = document.createElement("option");
+                    opt.value = m;
+                    opt.textContent = m;
+                    benchModel.appendChild(opt);
+                }
+            }
+
+            benchNavBtn.style.display = "";
+        } catch (e) {
+            // inspect_ai not available — nav button stays hidden
+        }
+    })();
+
+    function setBenchFormLocked(locked) {
+        benchSelect.disabled = locked;
+        benchModel.disabled = locked;
+        benchLimit.disabled = locked;
+        benchRunBtn.disabled = locked;
+    }
+
+    async function runBenchmark() {
+        setBenchFormLocked(true);
+        benchRunBtn.innerHTML =
+            '<div class="bench-spinner"><span></span><span></span><span></span></div> Running Benchmark';
+        benchPhase = "setup";
+        benchRenderedCount = 0;
+        benchRenderedIds = new Set();
+        benchOutput.innerHTML =
+            '<div class="bench-setup">' +
+            '<div class="bench-spinner"><span></span><span></span><span></span></div>' +
+            'Setting up benchmark...</div>';
+
+        // Activate two-column layout and clear previous results
+        benchPanel.classList.add("bench-running");
+        benchResultsPanel.querySelectorAll(".bench-question-card").forEach(el => el.remove());
+        benchResultsEmpty.style.display = "";
+
+        try {
+            const res = await fetch("/benchmarks/run", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    benchmark: benchSelect.value,
+                    model: benchModel.value,
+                    limit: parseInt(benchLimit.value),
+                }),
+            });
+
+            if (!res.ok) {
+                const err = await res.json();
+                benchOutput.innerHTML = `<div class="bench-error">${err.error}</div>`;
+                setBenchFormLocked(false);
+                benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Run Benchmark';
+                benchPhase = null;
+                benchPanel.classList.remove("bench-running");
+                return;
+            }
+
+            benchPollId = setInterval(pollBenchmark, 2000);
+        } catch (e) {
+            benchOutput.innerHTML = `<div class="bench-error">${e.message}</div>`;
+            setBenchFormLocked(false);
+            benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Run Benchmark';
+            benchPhase = null;
+            benchPanel.classList.remove("bench-running");
+        }
+    }
+
+    function renderQuestionCard(sample, index) {
+        const card = document.createElement("div");
+        card.className = "bench-question-card " + (sample.is_correct ? "correct" : "incorrect");
+
+        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const choicesHtml = (sample.choices || []).map((c, i) => {
+            const letter = labels[i] || String(i);
+            let cls = "bench-q-choice";
+            const isModelPick = sample.model_answer === letter;
+            const isCorrect = sample.target === letter;
+            if (isModelPick && isCorrect) {
+                cls += " model-pick correct-answer";
+            } else if (isModelPick && !isCorrect) {
+                cls += " wrong-pick";
+            } else if (isCorrect) {
+                cls += " correct-answer";
+            }
+            const text = typeof c === "string" ? c : (c.value || c.text || String(c));
+            return `<div class="${cls}" title="${letter}) ${text.replace(/"/g, '&quot;')}">${letter}) ${text}</div>`;
+        }).join("");
+
+        card.innerHTML =
+            '<div class="bench-q-header">' +
+                `<span class="bench-q-number">Q${index + 1}</span>` +
+                `<span class="bench-q-badge ${sample.is_correct ? 'correct' : 'incorrect'}">${sample.is_correct ? 'Correct' : 'Incorrect'}</span>` +
+            '</div>' +
+            `<div class="bench-q-text">${(sample.input || "").replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` +
+            (choicesHtml ? `<div class="bench-q-choices">${choicesHtml}</div>` : '') +
+            '<div class="bench-q-answers">' +
+                `<span class="${sample.is_correct ? 'answer-correct' : 'answer-incorrect'}">Model: <strong>${sample.model_answer || '—'}</strong></span>` +
+                `<span class="answer-correct">Correct: <strong>${sample.target || '—'}</strong></span>` +
+            '</div>';
+
+        return card;
+    }
+
+    async function pollBenchmark() {
+        try {
+            const res = await fetch("/benchmarks/status");
+            if (!res.ok) return;
+            const data = await res.json();
+
+            if (data.running) {
+                if (data.phase === "evaluating" && benchPhase !== "evaluating") {
+                    benchPhase = "evaluating";
+                    benchOutput.innerHTML =
+                        '<div class="bench-evaluating">' +
+                        `<div class="bench-eval-counter" id="bench-counter">0 / ${data.total} questions</div>` +
+                        '<div class="bench-progress-track"><div class="bench-progress-bar indeterminate" id="bench-bar"></div></div>' +
+                        '</div>';
+                }
+
+                if (data.phase === "evaluating") {
+                    const completed = data.samples ? data.samples.length : (data.completed || 0);
+                    const bar = document.getElementById("bench-bar");
+                    const counter = document.getElementById("bench-counter");
+                    if (completed > 0 && bar) {
+                        bar.classList.remove("indeterminate");
+                        bar.style.width = Math.round((completed / data.total) * 100) + "%";
+                    }
+                    if (counter) {
+                        counter.textContent = completed + " / " + data.total + " questions";
+                    }
+
+                    // Render new question cards (deduplicate by sample id)
+                    if (data.samples) {
+                        let added = false;
+                        for (const sample of data.samples) {
+                            const sid = sample.id ?? sample.input;
+                            if (benchRenderedIds.has(sid)) continue;
+                            benchRenderedIds.add(sid);
+                            benchResultsEmpty.style.display = "none";
+                            benchResultsPanel.appendChild(renderQuestionCard(sample, benchRenderedCount));
+                            benchRenderedCount++;
+                            added = true;
+                        }
+                        if (added) {
+                            benchResultsPanel.scrollTop = benchResultsPanel.scrollHeight;
+                        }
+                    }
+                }
+                return;
+            }
+
+            // Benchmark finished — render any remaining samples
+            clearInterval(benchPollId);
+            benchPollId = null;
+            benchPhase = null;
+
+            if (data.samples) {
+                for (const sample of data.samples) {
+                    const sid = sample.id ?? sample.input;
+                    if (benchRenderedIds.has(sid)) continue;
+                    benchRenderedIds.add(sid);
+                    benchResultsEmpty.style.display = "none";
+                    benchResultsPanel.appendChild(renderQuestionCard(sample, benchRenderedCount));
+                    benchRenderedCount++;
+                }
+                benchResultsPanel.scrollTop = benchResultsPanel.scrollHeight;
+            }
+
+            if (data.error) {
+                benchOutput.innerHTML = `<div class="bench-error">${data.error}</div>`;
+                setBenchFormLocked(false);
+                benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Run Benchmark';
+                benchPanel.classList.remove("bench-running");
+            } else if (data.result) {
+                const r = data.result;
+                const benchLabel = benchSelect.options[benchSelect.selectedIndex]?.text || r.benchmark;
+                benchOutput.innerHTML =
+                    '<div class="bench-result">' +
+                    `<div class="bench-accuracy">${r.accuracy}%</div>` +
+                    `<div class="bench-meta">${benchLabel} &middot; ${r.model}</div>` +
+                    `<div class="bench-meta">${r.limit} questions &middot; ${r.elapsed}s</div>` +
+                    '</div>';
+                benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Benchmark Complete';
+                // Results panel stays visible after completion
+                refreshBenchmarkHistory();
+            }
+        } catch (e) {
+            // poll failed — will retry next interval
+        }
+    }
+
+    // ── Benchmark history persistence ──
+    const benchHistorySection = document.getElementById("bench-history-section");
+    const benchHistoryList = document.getElementById("bench-history-list");
+
+    async function refreshBenchmarkHistory() {
+        try {
+            const res = await fetch("/benchmark-runs");
+            if (!res.ok) return;
+            const runs = await res.json();
+
+            if (!runs.length) {
+                benchHistoryList.innerHTML = '<span class="history-empty">No benchmark runs</span>';
+                return;
+            }
+
+            benchHistorySection.style.display = "";
+            benchHistoryList.innerHTML = "";
+            for (const run of runs) {
+                const btn = document.createElement("button");
+                btn.className = "bench-history-item";
+                const modelShort = run.model.split("/").pop();
+                btn.innerHTML =
+                    `<div class="bh-title">${run.benchmark_label}</div>` +
+                    `<div class="bh-detail">${modelShort} &middot; ${run.limit}q &middot; <span class="bh-accuracy">${run.accuracy}%</span></div>`;
+                btn.addEventListener("click", () => loadBenchmarkRun(run.id));
+                benchHistoryList.appendChild(btn);
+            }
+        } catch (e) {
+            // benchmark-runs not available
+        }
+    }
+
+    async function loadBenchmarkRun(runId) {
+        try {
+            const res = await fetch(`/benchmark-runs/${runId}`);
+            if (!res.ok) return;
+            const run = await res.json();
+
+            // Switch to benchmark view with two-column layout
+            setBodyState("state-benchmark");
+            benchPanel.classList.add("bench-running");
+            if (benchPollId) { clearInterval(benchPollId); benchPollId = null; }
+            benchPhase = null;
+            benchRenderedCount = 0;
+            benchRenderedIds = new Set();
+            benchResultsPanel.querySelectorAll(".bench-question-card").forEach(el => el.remove());
+            benchResultsEmpty.style.display = "none";
+
+            // Lock the form and set values to match the saved run
+            setBenchFormLocked(true);
+            for (const opt of benchSelect.options) {
+                if (opt.value === run.benchmark) { benchSelect.value = run.benchmark; break; }
+            }
+            for (const opt of benchModel.options) {
+                if (opt.value === run.model) { benchModel.value = run.model; break; }
+            }
+            for (const opt of benchLimit.options) {
+                if (opt.value == run.limit) { benchLimit.value = run.limit; break; }
+            }
+
+            // Show result summary
+            benchOutput.innerHTML =
+                '<div class="bench-result">' +
+                `<div class="bench-accuracy">${run.accuracy}%</div>` +
+                `<div class="bench-meta">${run.benchmark_label} &middot; ${run.model}</div>` +
+                `<div class="bench-meta">${run.limit} questions &middot; ${run.elapsed}s</div>` +
+                '</div>';
+            benchRunBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Benchmark Complete';
+
+            // Render all question cards
+            if (run.samples) {
+                for (const sample of run.samples) {
+                    benchResultsPanel.appendChild(renderQuestionCard(sample, benchRenderedCount));
+                    benchRenderedCount++;
+                }
+            }
+        } catch (e) {
+            // failed to load run
+        }
+    }
+
+    // Load benchmark history on startup
+    refreshBenchmarkHistory();
+</script>
+</body>
+</html>
