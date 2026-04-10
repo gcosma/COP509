@@ -38,7 +38,7 @@ About the module [COP509-NLP](https://lucas.lboro.ac.uk/pub-apx/f?p=510:SPECIFIC
 | 7 | 16th Mar | Transformers & Guest Lecture (Petros A.) | [📖 Transformers](https://github.com/gcosma/COP509/blob/main/Slides/8.TransformerModels.pdf)| [Tutorial 7a](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial7Summarization_with_user_pasted_data.ipynb) · [Tutorial 7b](https://github.com/gcosma/COP509/blob/main/Tutorials/Tutorial8Summarization.ipynb) (Note: we will cover summarisation in the lecture after Easter) | [Lab 6 & 7](#week-7-text-summarisation) | [Petro's lab on memory](https://github.com/gcosma/COP509/tree/main/COP509-memory-lab)
 | — | — | **Easter Break (3 weeks)** | — | — | — |
 | 8 | 13th Apr | RAGS, Deduplication, Hashing (materials only) | [📖 Deduplication](https://github.com/gcosma/COP509/tree/main/Slides/10.DeduplicatingTrainingData.pdf) · [📖 MinHash](https://github.com/gcosma/COP509/tree/main/Slides/Optional:MinHash.pdf) | [📖 A tutorial on RAG](https://github.com/gcosma/COP509/blob/main/Tutorials/TutorialRAG.ipynb) |
-| 9 | 20th Apr | Summarisation & Coursework Q&A |  | | — |
+| 9 | 20th Apr | Summarisation & Coursework Q&A |Week's 7 tutorials on summarisation   | — | — |
 | 10 | 27th Apr | Coursework Q&A | — | — | — |
 
 ---
